@@ -1,9 +1,12 @@
+import { bodyFont, headingFont, monoFont } from '@/constants/fonts';
 import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-	title: 'PlanetaRios',
-	description: 'PlanetaRios',
+	title: {
+		template: '%s | PlanetaRios',
+		default: 'PlanetaRios',
+	},
 };
 
 export default function RootLayout({
@@ -13,7 +16,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="es">
-			<body className="antialiased">{children}</body>
+			<body
+				className={`antialiased ${headingFont.variable} ${bodyFont.variable} ${monoFont.variable} antialiased`}
+			>
+				{children}
+			</body>
 		</html>
 	);
 }
