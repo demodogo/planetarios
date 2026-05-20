@@ -8,7 +8,6 @@ export const PAGES_INFO: Record<string, PageInfo> = {
 	home: {
 		title: 'PlanetaRios',
 		description: 'Conoce nuestra misión',
-		image: undefined,
 	},
 	valueModel: {
 		title: 'Modelo de valor',

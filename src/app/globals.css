@@ -1,5 +1,30 @@
 @import 'tailwindcss';
 
+@theme {
+	--font-body: 'Texta Narrow', sans-serif;
+}
+@font-face {
+	font-family: 'Texta Narrow';
+	src: url('../assets/fonts/texta/Texta Narrow Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Texta Narrow';
+	src: url('../assets/fonts/texta/Texta Narrow Medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Texta Narrow';
+	src: url('../assets/fonts/texta/Texta Narrow Bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
 :root {
 	--background: #ffffff;
 	--foreground: #000000;
@@ -58,3 +83,16 @@ img {
 .font-mono {
 	font-family: var(--font-mono), monospace;
 }
+
+/* 
+Breakpoint prefix	Minimum width	CSS
+Base - 409 - Pixel 9 Pro (Mobile standard)
+
+sm	40rem (640px)	@media (width >= 40rem) { ... } // Mobile
+md	48rem (768px)	@media (width >= 48rem) { ... } // Tablet pequeña
+lg	64rem (1024px)	@media (width >= 64rem) { ... } // iPad Pro
+xl	80rem (1280px)	@media (width >= 80rem) { ... } // Macbook 16"
+2xl	96rem (1536px)	@media (width >= 96rem) { ... }
+
+
+*/

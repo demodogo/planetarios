@@ -1,8 +1,10 @@
 import { PAGES_INFO } from '@/constants/seo-info';
 
+type MetadataImage = string | URL;
+
 interface SharedMetadataArgs {
 	slug: string;
-	fallbackImages?: any[];
+	fallbackImages?: MetadataImage[];
 }
 
 export function getSharedMetadata({

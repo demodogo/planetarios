@@ -1,7 +1,11 @@
+import { HomePage } from '@/ui/home/home-page';
+import { SiteNavbar } from '@/ui/shared/site-navbar';
+
 export default function Home() {
 	return (
-		<main className="min-h-screen flex items-center justify-center bg-white text-black dark:bg-black dark:text-white">
-			<h1 className="text-4xl font-bold">PlanetaRios</h1>
+		<main className="flex min-h-dvh w-full flex-col bg-white">
+			<SiteNavbar />
+			<HomePage />
 		</main>
 	);
 }
