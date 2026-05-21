@@ -7,10 +7,10 @@ export function HomeHighlightStrips() {
 				title={'NUESTRA\nCONTRIBUCIÓN'}
 				alignment="left"
 				backgroundColor="#c1e61e"
-				barWidth={732}
+				barWidth={850}
 				barHeight={146}
 				titleWidth={409}
-				titleOffsetX={288}
+				titleOffsetX={420}
 				titleOffsetY={20}
 				ctaOffsetX={562}
 				ctaOffsetY={11}
@@ -21,7 +21,7 @@ export function HomeHighlightStrips() {
 				title={'INEVITABLE\nOBSOLESCENCIA'}
 				alignment="right"
 				backgroundColor="#00b0f9"
-				barWidth={732}
+				barWidth={850}
 				barHeight={128}
 				titleWidth={529}
 				titleOffsetX={13}
@@ -35,10 +35,10 @@ export function HomeHighlightStrips() {
 				title={'SOMOS\nJUVENÓLOGOS'}
 				alignment="left"
 				backgroundColor="#ffe940"
-				barWidth={732}
+				barWidth={850}
 				barHeight={126}
 				titleWidth={410}
-				titleOffsetX={292}
+				titleOffsetX={420}
 				titleOffsetY={17}
 				ctaOffsetX={562}
 				ctaOffsetY={14}
