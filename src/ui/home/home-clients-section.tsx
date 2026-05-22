@@ -9,7 +9,7 @@ export function HomeClientsSection() {
 				<h3 className="font-heading text-center text-[2.625rem] leading-none font-bold text-black sm:text-[3.25rem] xl:text-[4rem]">
 					NUESTROS CLIENTES
 				</h3>
-				<p className="font-body-prototype mt-3 max-w-[45.4375rem] text-center text-base leading-[1.18] font-light text-[rgb(0_0_0_/_0.8)] sm:text-[1.125rem] xl:mt-[0.625rem] xl:text-[1.5625rem] xl:leading-[1.07]">
+				<p className="font-body-prototype mt-3 max-w-[45.4375rem] text-center text-base leading-[1.18] font-light text-[rgb(0_0_0_/_0.8)] sm:text-[1.125rem] md:text-[1.3rem] lg:text-[1.8rem] xl:mt-[0.625rem] xl:text-[1.5625rem] xl:leading-[1.07]">
 					Hemos trabajado con clientes internacionales y locales, con
 					corporativos, medianas empresas y emprendedores, todos ellos de los
 					más variados rubros.

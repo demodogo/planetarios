@@ -11,7 +11,7 @@ export function HomeHero() {
 				<h2 className="font-heading text-[2.5rem] md:text-[5rem] lg:text-[7rem] font-bold  leading-[1.2]">
 					CONSULTORA
 				</h2>
-				<p className="font-body-prototype text-justify md:text-center text-base font-light text-[rgb(0_0_0_/_0.8)] text-[1rem] md:text-[1.26rem] lg:text-[1.3125rem] xl:text-[1.5625rem]">
+				<p className="font-body-prototype text-justify md:text-center text-base font-light text-[rgb(0_0_0_/_0.8)] text-[1rem] md:text-[1.26rem] lg:text-[1.5rem] xl:text-[1.5625rem]">
 					Somos una consultora estratégica que propone cambios al modelo de
 					negocio de las empresas para que puedan adaptarse mejor a los cambios
 					que cada tanto va experimentando la sociedad. Nos dedicamos a la
