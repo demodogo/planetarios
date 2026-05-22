@@ -2,32 +2,10 @@ import Image from 'next/image';
 
 import { ASSOCIATE_LOGOS, CLIENT_LOGOS } from '@/constants/brand-logos';
 
-interface HomeClientsSectionProps {
-	inSlide?: boolean;
-}
-
-export function HomeClientsSection({
-	inSlide = false,
-}: HomeClientsSectionProps) {
-	const wrapperClassName = inSlide
-		? 'mx-auto flex h-full w-full max-w-[80rem] flex-col items-center px-5 pb-8 pt-10 sm:px-8 lg:justify-between lg:px-12 lg:pb-10 lg:pt-10'
-		: 'mx-auto flex w-full max-w-[80rem] flex-col items-center px-5 pb-14 pt-16 sm:px-8 md:pb-16 md:pt-20 xl:px-[7.5625rem] xl:pb-[3.4375rem] xl:pt-[5.8125rem]';
-
-	const clientsGridClassName = inSlide
-		? 'mt-8 grid w-full max-w-[64.8125rem] grid-cols-2 place-items-center gap-x-6 gap-y-8 md:grid-cols-4 lg:mt-6 lg:flex lg:items-center lg:justify-between'
-		: 'mt-10 grid w-full grid-cols-2 place-items-center gap-x-6 gap-y-8 md:grid-cols-4 xl:mt-[2.25rem] xl:flex xl:h-[12.125rem] xl:w-[64.8125rem] xl:items-center xl:justify-between';
-
-	const associatesTitleClassName = inSlide
-		? 'font-heading mt-10 text-center text-[1.5rem] leading-none font-bold text-black sm:text-[1.75rem] lg:mt-8 lg:text-[2rem]'
-		: 'font-heading mt-14 text-center text-[1.5rem] leading-none font-bold text-black sm:text-[1.75rem] xl:mt-[5.5625rem] xl:text-[2rem]';
-
-	const associatesGridClassName = inSlide
-		? 'mt-6 flex w-full flex-col items-center justify-center gap-8 md:flex-row md:gap-16 lg:mt-6 lg:gap-24'
-		: 'mt-8 flex w-full flex-col items-center justify-center gap-8 md:flex-row md:gap-16 xl:mt-[2.0625rem] xl:gap-[10rem]';
-
+export function HomeClientsSection() {
 	return (
-		<section className="w-full">
-			<div className={wrapperClassName}>
+		<section className="w-full  bg-[var(--surface-muted)]">
+			<div className="mx-auto flex w-full max-w-[80rem] flex-col items-center px-5 pb-14 pt-16 sm:px-8 md:pb-16 md:pt-20 xl:px-[7.5625rem] xl:pb-[3.4375rem] xl:pt-[5.8125rem]">
 				<h3 className="font-heading text-center text-[2.625rem] leading-none font-bold text-black sm:text-[3.25rem] xl:text-[4rem]">
 					NUESTROS CLIENTES
 				</h3>
@@ -37,7 +15,7 @@ export function HomeClientsSection({
 					más variados rubros.
 				</p>
 
-				<div className={clientsGridClassName}>
+				<div className="mt-10 grid w-full grid-cols-2 place-items-center gap-x-6 gap-y-8 md:grid-cols-4 xl:mt-[2.25rem] xl:flex xl:h-[12.125rem] xl:w-[64.8125rem] xl:items-center xl:justify-between">
 					{CLIENT_LOGOS.map((client) => (
 						<Image
 							key={client.title}
@@ -48,11 +26,11 @@ export function HomeClientsSection({
 					))}
 				</div>
 
-				<h4 className={associatesTitleClassName}>
+				<h4 className="font-heading mt-28 text-center text-[1.5rem] leading-none font-bold text-black sm:text-[1.75rem] xl:mt-[5.5625rem] xl:text-[2rem]">
 					EMPRESAS ASOCIADAS
 				</h4>
 
-				<div className={associatesGridClassName}>
+				<div className="mt-8 flex w-full flex-col items-center justify-center gap-8 md:flex-row md:gap-16 xl:mt-[2.0625rem] xl:gap-[10rem]">
 					{ASSOCIATE_LOGOS.map((associate) => (
 						<Image
 							key={associate.title}
