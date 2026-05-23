@@ -1,11 +1,6 @@
 'use client';
 
-import {
-	Disclosure,
-	DisclosureButton,
-	DisclosurePanel,
-	Transition,
-} from '@headlessui/react';
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 
 interface HighlightStripInfoProps {
 	titleSide: 'left' | 'right';
@@ -39,20 +34,23 @@ export function HighlightStripInfo({
 								más información
 							</span>
 						</DisclosureButton>
-						<Transition
-							enter="transition duration-500 ease-out"
-							enterFrom="transform -translate-y-2 opacity-0"
-							enterTo="transform translate-y-0 opacity-100"
-							leave="transition duration-500 ease-out"
-							leaveFrom="transform translate-y-0 opacity-100"
-							leaveTo="transform -translate-y-2 opacity-0"
-						>
-							<DisclosurePanel
-								className={`px-4 pb-2 pt-4 text-gray-600 flex flex-col ${titleSide === 'right' ? 'items-end' : 'items-start'} w-full`}
+						<DisclosurePanel static className="w-full overflow-hidden">
+							<div
+								className={`grid transition-[grid-template-rows,opacity] duration-500 ease-in-out ${
+									open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+								}`}
 							>
-								<div className="max-w-[80%]">{content}</div>
-							</DisclosurePanel>
-						</Transition>
+								<div className="overflow-hidden">
+									<div
+										className={`flex w-full flex-col px-4 text-gray-600 transition-[padding,transform] duration-500 ease-in-out ${
+											titleSide === 'right' ? 'items-end' : 'items-start'
+										} ${open ? 'translate-y-0 pb-2 pt-4' : '-translate-y-2 pb-0 pt-0'}`}
+									>
+										<div className="max-w-[80%]">{content}</div>
+									</div>
+								</div>
+							</div>
+						</DisclosurePanel>
 
 						<DisclosureButton
 							className={`${open ? '' : 'hidden'} flex w-full items-center justify-end gap-2 rounded-lg px-1 py-2 text-left font-bold text-black ${titleSide === 'left' ? 'justify-start' : 'justify-end'}`}

@@ -1,6 +1,6 @@
 export function InevitableObsolescenciaInfo() {
 	return (
-		<div className="flex flex-col gap-4 text-left text-lg xl:text-2xl">
+		<div className="flex flex-col gap-4 text-left text-xl xl:text-2xl">
 			<p>
 				Vemos la obsolescencia como un proceso natural producido por el simple
 				paso del tiempo, una amenaza a la que se debe estar atento. Prevenir la
