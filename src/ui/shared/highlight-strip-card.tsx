@@ -1,4 +1,4 @@
-import { HighlightStripInfo } from '../home/highlight-strip-info';
+import { HighlightStripInfo } from './highlight-strip-info';
 
 type HighlightStripAlignment = 'left' | 'right';
 
@@ -11,9 +11,6 @@ interface HighlightStripCardProps {
 	titleWidth: number;
 	titleOffsetX: number;
 	titleOffsetY: number;
-	ctaOffsetX: number;
-	ctaOffsetY: number;
-	href?: string;
 	className?: string;
 	infoTitleSide: 'left' | 'right';
 	infoCardContent: React.ReactNode;
@@ -21,6 +18,14 @@ interface HighlightStripCardProps {
 
 function pxToRem(value: number) {
 	return `${value / 16}rem`;
+}
+
+function renderTitleLines(title: string) {
+	return title.split('\n').map((line) => (
+		<span key={line} className="block">
+			{line}
+		</span>
+	));
 }
 
 export function HighlightStripCard({
@@ -32,9 +37,6 @@ export function HighlightStripCard({
 	titleWidth,
 	titleOffsetX,
 	titleOffsetY,
-	ctaOffsetX,
-	ctaOffsetY,
-	href = '#',
 	className,
 	infoTitleSide,
 	infoCardContent,
@@ -54,11 +56,7 @@ export function HighlightStripCard({
 						style={{ backgroundColor }}
 					>
 						<h3 className="font-heading text-[2.125rem] leading-[0.95] font-bold uppercase text-black sm:text-[2.625rem] lg:text-[2.875rem]">
-							{title.split('\n').map((line) => (
-								<span key={line} className="block">
-									{line}
-								</span>
-							))}
+							{renderTitleLines(title)}
 						</h3>
 					</div>
 					<div className="w-0 min-w-full">
@@ -89,11 +87,7 @@ export function HighlightStripCard({
 								textAlign: alignment === 'left' ? 'right' : 'left',
 							}}
 						>
-							{title.split('\n').map((line) => (
-								<span key={line} className="block">
-									{line}
-								</span>
-							))}
+							{renderTitleLines(title)}
 						</h3>
 					</div>
 					<HighlightStripInfo

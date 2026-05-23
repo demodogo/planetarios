@@ -26,7 +26,7 @@ export function HighlightStripInfo({
 							className={`${open ? 'hidden' : ''} flex w-full items-center justify-end gap-2 rounded-lg px-1 py-2 text-left font-bold text-black ${titleSide === 'left' ? 'justify-start' : 'justify-end'}`}
 						>
 							<span
-								className={`font-mono text-[0.875rem] sm:text-base translate-y-[1px] transition-transform duration-200 ${open ? 'rotate-90' : ''}`}
+								className={`font-mono text-[0.875rem] translate-y-[1px] transition-transform duration-200 sm:text-base ${open ? 'rotate-90' : ''}`}
 							>
 								&gt;
 							</span>
@@ -55,9 +55,7 @@ export function HighlightStripInfo({
 						<DisclosureButton
 							className={`${open ? '' : 'hidden'} flex w-full items-center justify-end gap-2 rounded-lg px-1 py-2 text-left font-bold text-black ${titleSide === 'left' ? 'justify-start' : 'justify-end'}`}
 						>
-							<span
-								className={`font-mono text-[0.875rem] sm:text-base translate-y-[1px] transition-transform duration-200`}
-							>
+							<span className="font-mono text-[0.875rem] translate-y-[1px] transition-transform duration-200 sm:text-base">
 								&gt;
 							</span>
 							<span className="font-mono text-[0.875rem] text-black sm:text-base">
