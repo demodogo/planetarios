@@ -5,9 +5,7 @@ import { HomeHighlightStrips } from './home-highlight-strips';
 export function HomePage() {
 	return (
 		<div className="w-full mx-auto">
-			<div className="mx-auto">
-				<HomeHero />
-			</div>
+			<HomeHero />
 			<HomeHighlightStrips />
 			<HomeClientsSection />
 		</div>

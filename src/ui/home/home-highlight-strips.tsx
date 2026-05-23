@@ -1,4 +1,7 @@
 import { HighlightStripCard } from '@/ui/shared/highlight-strip-card';
+import { InevitableObsolescenciaInfo } from './inevitable-obsolescencia-info';
+import { NuestraContribucionInfo } from './nuestra-contribucion-info';
+import { SomosJuvenologosInfo } from './somos-juvenologos-info';
 
 export function HomeHighlightStrips() {
 	return (
@@ -15,6 +18,8 @@ export function HomeHighlightStrips() {
 				ctaOffsetX={562}
 				ctaOffsetY={11}
 				className="xl:mb-[4.1875rem]"
+				infoTitleSide={'right'}
+				infoCardContent={<NuestraContribucionInfo />}
 			/>
 
 			<HighlightStripCard
@@ -29,6 +34,8 @@ export function HomeHighlightStrips() {
 				ctaOffsetX={0}
 				ctaOffsetY={11}
 				className="xl:mb-[3.1875rem]"
+				infoTitleSide={'left'}
+				infoCardContent={<InevitableObsolescenciaInfo />}
 			/>
 
 			<HighlightStripCard
@@ -42,6 +49,8 @@ export function HomeHighlightStrips() {
 				titleOffsetY={17}
 				ctaOffsetX={562}
 				ctaOffsetY={14}
+				infoTitleSide={'right'}
+				infoCardContent={<SomosJuvenologosInfo />}
 			/>
 		</section>
 	);
