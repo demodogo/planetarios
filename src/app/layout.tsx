@@ -1,6 +1,7 @@
 import { headingFont, monoFont } from '@/constants/fonts';
+import { HomeFooter } from '@/ui/shared/footer';
+import { SiteNavbar } from '@/ui/shared/site-navbar';
 import type { Metadata } from 'next';
-import 'swiper/css';
 import './globals.css';
 export const metadata: Metadata = {
 	title: {
@@ -19,7 +20,10 @@ export default function RootLayout({
 			<body
 				className={`antialiased ${headingFont.variable}  ${monoFont.variable} antialiased`}
 			>
+				<SiteNavbar />
+
 				{children}
+				<HomeFooter />
 			</body>
 		</html>
 	);
