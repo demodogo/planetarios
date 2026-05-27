@@ -86,19 +86,19 @@ function Circles() {
 export function ModeloEstructura() {
 	return (
 		<section className="relative w-full overflow-hidden">
-			<div className="relative w-full xl:min-h-[56.1875rem]">
+			<div className="relative mx-auto w-full max-w-[80rem] lg:min-h-[43.75rem] xl:min-h-[56.1875rem]">
 
-				<div className="relative z-10 mx-auto w-full max-w-[80rem] px-5 pt-8 sm:px-8 xl:px-[3.1875rem] xl:pt-[22rem]">
-					<div className="w-full md:w-[22rem] lg:w-[26rem] xl:w-[29.125rem]">
-						<p className="font-heading text-[0.8125rem] font-normal uppercase text-black/60 sm:text-[0.875rem] md:text-[1rem] xl:text-[1.125rem]">
+				<div className="relative z-10 px-5 pt-8 sm:px-8 lg:absolute lg:bottom-0 lg:left-0 lg:top-0 lg:flex lg:w-[24.25rem] lg:items-center lg:bg-white lg:px-[3.1875rem] xl:static xl:w-full xl:items-start xl:bg-transparent xl:pt-[22rem]">
+					<div className="w-full md:w-[22rem] lg:w-full xl:w-[29.125rem]">
+						<p className="font-heading text-[0.8125rem] font-normal uppercase text-black/60 sm:text-[0.875rem] lg:text-[1.125rem]">
 							COMO SE ESTRUCTURA
 						</p>
-						<h2 className="font-heading mt-1 text-[2rem] font-bold uppercase leading-[1] text-black sm:text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] xl:text-[4rem]">
+						<h2 className="font-heading mt-1 text-[2rem] font-bold uppercase leading-[1] text-black sm:text-[2.25rem] md:text-[2.75rem] lg:text-[3rem] xl:text-[4rem]">
 							EL MODELO
 							<br />
 							DE VALOR
 						</h2>
-						<p className="font-body-prototype mt-4 text-[0.875rem] leading-[1.07] text-black/80 sm:text-[0.9375rem] md:text-[1rem] lg:text-[1.125rem] xl:text-[1.375rem]">
+						<p className="font-body-prototype mt-4 text-[0.875rem] leading-[1.07] text-black/80 sm:text-[0.9375rem] md:text-[1rem] lg:text-[1.0625rem] xl:text-[1.375rem]">
 							El modelo de valor es una matriz de 8 variables que sirve para
 							configurar proyectos de todo tipo sean estos comerciales, artísticos,
 							deportivos, sociales o de cualquier índole.
@@ -106,8 +106,17 @@ export function ModeloEstructura() {
 					</div>
 				</div>
 
-				<div className="mt-6 flex justify-center xl:hidden">
-					<div className="relative h-[20rem] w-[20rem] sm:h-[26rem] sm:w-[26rem] md:h-[34rem] md:w-[34rem] lg:h-[44rem] lg:w-[44rem]">
+				<div className="mt-6 flex justify-center lg:hidden">
+					<div className="relative h-[20rem] w-[20rem] sm:h-[26rem] sm:w-[26rem] md:h-[38rem] md:w-[38rem]">
+						<Circles />
+					</div>
+				</div>
+
+				<div
+					className="absolute top-0 hidden lg:block xl:hidden"
+					style={{ right: '-4rem', width: '43.75rem', height: '43.75rem' }}
+				>
+					<div className="relative h-full w-full">
 						<Circles />
 					</div>
 				</div>
@@ -122,20 +131,20 @@ export function ModeloEstructura() {
 				</div>
 			</div>
 
-			<div className="mx-auto w-full max-w-[80rem] px-5 pb-16 pt-10 sm:px-8 xl:px-[3.1875rem] xl:pb-24">
-				<div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-6 md:grid-cols-4 xl:gap-x-8 xl:gap-y-12">
+			<div className="mx-auto w-full max-w-[80rem] px-5 pb-16 pt-10 sm:px-8 lg:px-[3.1875rem] lg:pb-24">
+				<div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-6 md:grid-cols-4 lg:gap-x-8 lg:gap-y-12">
 					{items.map((item) => (
-						<div key={item.sublabel} className="flex flex-col items-center text-center xl:items-start xl:text-left">
+						<div key={item.sublabel} className="flex flex-col items-center text-center lg:items-start lg:text-left">
 							<div
-								className="h-[7rem] w-[7rem] rounded-full border-[1.75rem] sm:h-[8rem] sm:w-[8rem] sm:border-[2rem] xl:h-[9.1875rem] xl:w-[9.1875rem] xl:border-[2.5rem]"
+								className="h-[7rem] w-[7rem] rounded-full border-[1.75rem] sm:h-[8rem] sm:w-[8rem] sm:border-[2rem] lg:h-[9.1875rem] lg:w-[9.1875rem] lg:border-[2.5rem]"
 								style={{ borderColor: item.color }}
 							/>
-							<p className="font-heading mt-2 text-[0.75rem] leading-tight text-black/80 sm:text-[0.8125rem] xl:mt-3 xl:text-[0.875rem]">
+							<p className="font-heading mt-2 text-[0.875rem] leading-tight text-black/80 sm:text-[0.9375rem] lg:mt-3 lg:text-[1rem]">
 								<span className="font-light uppercase">{item.label}</span>
 								<br />
 								<span className="font-bold uppercase">{item.sublabel}</span>
 							</p>
-							<p className="font-body-prototype mt-1 text-[0.6875rem] leading-[1.1] text-black/70 sm:text-[0.75rem] xl:text-[0.8125rem]">
+							<p className="font-body-prototype mt-1 text-[0.8125rem] leading-[1.1] text-black/70 sm:text-[0.875rem] lg:text-[0.9375rem]">
 								{item.description}
 							</p>
 						</div>
