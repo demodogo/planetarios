@@ -2,6 +2,7 @@
 
 @theme {
 	--font-body: 'Texta Narrow', sans-serif;
+	--color-brand-blue: var(--brand-blue);
 }
 @font-face {
 	font-family: 'Texta Narrow';
