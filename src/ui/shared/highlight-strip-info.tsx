@@ -23,7 +23,7 @@ export function HighlightStripInfo({
 				{({ open }) => (
 					<>
 						<DisclosureButton
-							className={`${open ? 'hidden' : ''} flex w-full items-center justify-end gap-2 rounded-lg px-1 py-2 text-left font-bold text-black ${titleSide === 'left' ? 'justify-start' : 'justify-end'}`}
+							className={`${open ? 'hidden' : ''} flex w-full items-center gap-2 rounded-lg px-1 py-2 transform-gpu hover:scale-120 transition-transform duration-200 cursor-pointer text-left font-bold text-black ${titleSide === 'left' ? 'justify-start origin-left' : 'justify-end origin-right'}`}
 						>
 							<span
 								className={`font-mono text-[0.875rem] translate-y-[1px] transition-transform duration-200 sm:text-base ${open ? 'rotate-90' : ''}`}

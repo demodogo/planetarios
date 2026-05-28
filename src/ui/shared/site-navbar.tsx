@@ -10,18 +10,19 @@ export function SiteNavbar() {
 					src={PLANETARIOS_LOGOS.planetariosBlack}
 					alt={'Planetarios'}
 					width={59}
-				/>
-				<nav className="font-heading flex w-full flex-col items-center gap-3 text-md sm:justify-around sm:flex-row flex-1">
-					<Link href="#">MODELO DE VALOR</Link>
-					<Link
-						href="#"
-						className="flex w-full items-center bg-[var(--brand-yellow)] px-6 py-2 rounded-full text-center max-w-fit"
-					>
-						GENERACIONES DE TURNO
-					</Link>
-					<Link href="#">NOSOTROS</Link>
-				</nav>
-			</div>
+                />
+                <nav
+                    className="font-heading flex w-full flex-col items-center gap-3 text-md sm:justify-around sm:flex-row flex-1">
+                    <Link href="/modelo">MODELO DE VALOR</Link>
+                    <Link
+                        href="/generaciones/contenido"
+                        className="flex w-full items-center bg-[var(--brand-yellow)] px-6 py-2 rounded-full text-center max-w-fit"
+                    >
+                        GENERACIONES DE TURNO
+                    </Link>
+                    <Link href="/nosotros">NOSOTROS</Link>
+                </nav>
+            </div>
 		</header>
 	);
 }
