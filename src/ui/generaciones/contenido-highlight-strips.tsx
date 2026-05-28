@@ -1,4 +1,5 @@
 import { HighlightStripCard } from '@/ui/shared/highlight-strip-card';
+import {ModeloConcientesInfo} from "@/ui/modelo/info/concientes-info";
 
 export function ContenidoHighlightStrips() {
 	return (
@@ -7,39 +8,42 @@ export function ContenidoHighlightStrips() {
 				title={'¿QUÉ ES UNA\nGENERACIÓN DE TURNO?'}
 				alignment="left"
 				backgroundColor="#c1e61e"
-				barWidth={924}
-				barHeight={128}
-				titleWidth={679}
-				titleOffsetX={245}
-				titleOffsetY={18}
-				ctaOffsetX={840}
-				ctaOffsetY={11}
+                barWidth={1000}
+                barHeight={129}
+                titleWidth={679}
+                titleOffsetX={250}
+                titleOffsetY={18}
+                infoCardContent={<ModeloConcientesInfo />}
+                infoTitleSide={'right'}
+
 			/>
 
 			<HighlightStripCard
 				title={'QUIEREN CAMBIAR\nEL MUNDO'}
 				alignment="right"
 				backgroundColor="#fa6907"
-				barWidth={814}
+                barWidth={1000}
 				barHeight={129}
-				titleWidth={502}
-				titleOffsetX={13}
+				titleWidth={679}
+				titleOffsetX={60}
 				titleOffsetY={18}
-				ctaOffsetX={0}
-				ctaOffsetY={11}
+                infoCardContent={<ModeloConcientesInfo />}
+                infoTitleSide={'left'}
+
 			/>
 
 			<HighlightStripCard
 				title={'GENERACIONES\nPOR DÉCADAS'}
 				alignment="left"
 				backgroundColor="#ffe940"
-				barWidth={825}
-				barHeight={137}
-				titleWidth={439}
-				titleOffsetX={290}
-				titleOffsetY={18}
-				ctaOffsetX={730}
-				ctaOffsetY={14}
+                barWidth={1000}
+                barHeight={129}
+                titleWidth={679}
+                titleOffsetX={250}
+                titleOffsetY={18}
+                infoCardContent={<ModeloConcientesInfo />}
+                infoTitleSide={'right'}
+
 			/>
 		</section>
 	);

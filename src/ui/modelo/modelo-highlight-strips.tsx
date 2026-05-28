@@ -1,4 +1,11 @@
 import { HighlightStripCard } from '@/ui/shared/highlight-strip-card';
+import {ModeloPropositoInfo} from "@/ui/modelo/info/modelo-proposito-info";
+import {ModeloFielInfo} from "@/ui/modelo/info/modelo-fiel-info";
+import {Modelo2Info} from "@/ui/modelo/info/modelo-2.0-info";
+import {ModeloEvolucionInfo} from "@/ui/modelo/info/evolucion-info";
+import {ModeloCodigoInfo} from "@/ui/modelo/info/codigo-info";
+import {ModeloConcientesInfo} from "@/ui/modelo/info/concientes-info";
+import {ModeloPersonasInfo} from "@/ui/modelo/info/personas-info";
 
 export function ModeloHighlightStrips() {
 	return (
@@ -12,8 +19,8 @@ export function ModeloHighlightStrips() {
 				titleWidth={603}
 				titleOffsetX={59}
 				titleOffsetY={18}
-				ctaOffsetX={497}
-				ctaOffsetY={11}
+                infoCardContent={<ModeloPropositoInfo />}
+                infoTitleSide={'right'}
 			/>
 
 			<HighlightStripCard
@@ -25,8 +32,8 @@ export function ModeloHighlightStrips() {
 				titleWidth={463}
 				titleOffsetX={13}
 				titleOffsetY={18}
-				ctaOffsetX={0}
-				ctaOffsetY={11}
+                infoCardContent={<ModeloFielInfo />}
+                infoTitleSide={'left'}
 			/>
 
 			<HighlightStripCard
@@ -38,8 +45,8 @@ export function ModeloHighlightStrips() {
 				titleWidth={346}
 				titleOffsetX={455}
 				titleOffsetY={18}
-				ctaOffsetX={641}
-				ctaOffsetY={11}
+                infoCardContent={<Modelo2Info />}
+                infoTitleSide={'right'}
 			/>
 
 			<HighlightStripCard
@@ -51,8 +58,8 @@ export function ModeloHighlightStrips() {
 				titleWidth={463}
 				titleOffsetX={13}
 				titleOffsetY={18}
-				ctaOffsetX={0}
-				ctaOffsetY={11}
+                infoCardContent={<ModeloEvolucionInfo />}
+                infoTitleSide={'left'}
 			/>
 
 			<HighlightStripCard
@@ -64,8 +71,8 @@ export function ModeloHighlightStrips() {
 				titleWidth={429}
 				titleOffsetX={283}
 				titleOffsetY={18}
-				ctaOffsetX={549}
-				ctaOffsetY={14}
+                infoCardContent={<ModeloPersonasInfo />}
+                infoTitleSide={'right'}
 			/>
 
 			<HighlightStripCard
@@ -77,8 +84,8 @@ export function ModeloHighlightStrips() {
 				titleWidth={518}
 				titleOffsetX={13}
 				titleOffsetY={18}
-				ctaOffsetX={0}
-				ctaOffsetY={11}
+                infoCardContent={<ModeloConcientesInfo />}
+                infoTitleSide={'left'}
 			/>
 
 			<HighlightStripCard
@@ -90,8 +97,9 @@ export function ModeloHighlightStrips() {
 				titleWidth={461}
 				titleOffsetX={337}
 				titleOffsetY={18}
-				ctaOffsetX={641}
-				ctaOffsetY={11}
+                infoCardContent={<ModeloCodigoInfo />}
+                infoTitleSide={'right'}
+
 			/>
 		</section>
 	);

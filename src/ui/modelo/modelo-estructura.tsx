@@ -86,7 +86,7 @@ function Circles() {
 export function ModeloEstructura() {
 	return (
 		<section className="relative w-full overflow-hidden">
-			<div className="relative mx-auto w-full max-w-[80rem] lg:min-h-[43.75rem] xl:min-h-[56.1875rem]">
+			<div className="relative mx-auto w-full max-w-full lg:min-h-[43.75rem] xl:min-h-[56.1875rem]">
 
 				<div className="relative z-10 px-5 pt-8 sm:px-8 lg:absolute lg:bottom-0 lg:left-0 lg:top-0 lg:flex lg:w-[24.25rem] lg:items-center lg:bg-white lg:px-[3.1875rem] xl:static xl:w-full xl:items-start xl:bg-transparent xl:pt-[22rem]">
 					<div className="w-full md:w-[22rem] lg:w-full xl:w-[29.125rem]">
@@ -98,7 +98,7 @@ export function ModeloEstructura() {
 							<br />
 							DE VALOR
 						</h2>
-						<p className="font-body-prototype mt-4 text-[0.875rem] leading-[1.07] text-black/80 sm:text-[0.9375rem] md:text-[1rem] lg:text-[1.0625rem] xl:text-[1.375rem]">
+						<p className="font-body-prototype mt-4 text-[1.2rem] leading-[1.07] text-black/80 sm:text-[1rem] md:text-[1.2rem] lg:text-[1.2rem] xl:text-[1.375rem]">
 							El modelo de valor es una matriz de 8 variables que sirve para
 							configurar proyectos de todo tipo sean estos comerciales, artísticos,
 							deportivos, sociales o de cualquier índole.
@@ -123,7 +123,7 @@ export function ModeloEstructura() {
 
 				<div
 					className="absolute top-0 hidden xl:block"
-					style={{ right: '-5.3125rem', width: '56.1875rem', height: '56.1875rem' }}
+					style={{ right: '-5.3125rem', width: '56.1875rem', height: '56.1875rem'}}
 				>
 					<div className="relative h-full w-full">
 						<Circles />
