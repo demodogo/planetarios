@@ -1,5 +1,8 @@
 import { HighlightStripCard } from '@/ui/shared/highlight-strip-card';
-import {ModeloConcientesInfo} from "@/ui/modelo/info/concientes-info";
+
+import { GeneracionesDecadasInfo } from './info/generaciones-decadas-info';
+import { QueEsGeneracionInfo } from './info/que-es-generacion-info';
+import { QuierenCambiarInfo } from './info/quieren-cambiar-info';
 
 export function ContenidoHighlightStrips() {
 	return (
@@ -8,42 +11,39 @@ export function ContenidoHighlightStrips() {
 				title={'¿QUÉ ES UNA\nGENERACIÓN DE TURNO?'}
 				alignment="left"
 				backgroundColor="#c1e61e"
-                barWidth={1000}
-                barHeight={129}
-                titleWidth={679}
-                titleOffsetX={250}
-                titleOffsetY={18}
-                infoCardContent={<ModeloConcientesInfo />}
-                infoTitleSide={'right'}
-
+				barWidth={1000}
+				barHeight={129}
+				titleWidth={679}
+				titleOffsetX={250}
+				titleOffsetY={18}
+				infoCardContent={<QueEsGeneracionInfo />}
+				infoTitleSide="right"
 			/>
 
 			<HighlightStripCard
 				title={'QUIEREN CAMBIAR\nEL MUNDO'}
 				alignment="right"
 				backgroundColor="#fa6907"
-                barWidth={1000}
+				barWidth={1000}
 				barHeight={129}
 				titleWidth={679}
 				titleOffsetX={60}
 				titleOffsetY={18}
-                infoCardContent={<ModeloConcientesInfo />}
-                infoTitleSide={'left'}
-
+				infoCardContent={<QuierenCambiarInfo />}
+				infoTitleSide="left"
 			/>
 
 			<HighlightStripCard
 				title={'GENERACIONES\nPOR DÉCADAS'}
 				alignment="left"
 				backgroundColor="#ffe940"
-                barWidth={1000}
-                barHeight={129}
-                titleWidth={679}
-                titleOffsetX={250}
-                titleOffsetY={18}
-                infoCardContent={<ModeloConcientesInfo />}
-                infoTitleSide={'right'}
-
+				barWidth={1000}
+				barHeight={129}
+				titleWidth={679}
+				titleOffsetX={250}
+				titleOffsetY={18}
+				infoCardContent={<GeneracionesDecadasInfo />}
+				infoTitleSide="right"
 			/>
 		</section>
 	);
