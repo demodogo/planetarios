@@ -127,16 +127,26 @@ export function LasGeneracionesAdditionalSection() {
 			<div className="mx-auto w-full max-w-[80rem] px-5 pb-24 pt-14 sm:px-8 sm:pt-18 xl:px-[3.1875rem]">
 				<div className="grid gap-16 lg:grid-cols-2 lg:gap-10">
 					{silentGenerations.map((generation) => (
-						<article key={generation.name} className="text-center">
-							<h4 className="font-heading text-[2.5rem] font-bold uppercase leading-[0.88] text-black sm:text-[4.375rem]">
-								<span className="block">{generation.name.split(' ')[0]}</span>
-								<span className="block">
-									{generation.name.split(' ').slice(1).join(' ')}
-								</span>
-							</h4>
-							<p className="font-heading mt-5 text-[1.55rem] font-normal uppercase leading-none text-black sm:text-[2rem]">
-								{generation.years}
-							</p>
+						<article
+							key={generation.name}
+							className="group flex justify-center text-center"
+						>
+							<div className="relative w-full max-w-[38rem]">
+								<div className="relative flex min-h-[15rem] flex-col items-center justify-center pt-6">
+									<div className="absolute left-1/2 top-1/2 hidden h-[12rem] w-[10.625rem] -translate-x-1/2 -translate-y-1/2 rounded-[0.75rem] bg-[var(--brand-blue)] opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 lg:block" />
+									<h4 className="font-heading relative z-10 text-[2.5rem] font-bold uppercase leading-[0.88] text-black sm:text-[4.375rem]">
+										<span className="block">
+											{generation.name.split(' ')[0]}
+										</span>
+										<span className="block">
+											{generation.name.split(' ').slice(1).join(' ')}
+										</span>
+									</h4>
+									<p className="font-heading relative z-10 mt-5 text-[1.55rem] font-normal uppercase leading-none text-black sm:text-[2rem]">
+										{generation.years}
+									</p>
+								</div>
+							</div>
 						</article>
 					))}
 				</div>
