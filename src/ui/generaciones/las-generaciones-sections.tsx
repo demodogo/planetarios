@@ -65,7 +65,7 @@ function GenerationCard({
 export function LasGeneracionesIntroSection() {
 	return (
 		<section className="w-full">
-			<div className="h-[4.75rem] w-full bg-[var(--brand-yellow)] sm:h-[6.9375rem]" />
+			<div className="h-[4.75rem] w-full  sm:h-[6.9375rem]" />
 			<div className="mx-auto w-full max-w-[80rem] px-5 pb-18 pt-12 sm:px-8 sm:pb-24 sm:pt-16 xl:px-[3.1875rem]">
 				<SectionTitle
 					firstLine="OCHO"
