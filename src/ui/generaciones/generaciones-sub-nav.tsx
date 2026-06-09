@@ -11,7 +11,7 @@ const tabs = [
 	{ label: 'Contenido del Estudio', href: '/generaciones/contenido' },
 	{ label: 'Fuentes', href: '/generaciones/fuentes' },
 	{ label: 'Nomenclatura', href: '#' },
-	{ label: 'Metodología', href: '#' },
+	{ label: 'Metodología', href: '/generaciones/metodologia' },
 ];
 
 export function GeneracionesSubNav({ activeTab }: GeneracionesSubNavProps) {
