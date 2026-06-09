@@ -6,9 +6,12 @@ interface GeneracionesSubNavProps {
 
 const tabs = [
 	{ label: 'Naturaleza del Estudio', href: '#' },
-	{ label: 'Las Generaciones', href: '#' },
+	{
+		label: 'Las Generaciones',
+		href: '/generaciones-de-turno/las-generaciones',
+	},
 	{ label: 'Cambio de Paradigma', href: '#' },
-	{ label: 'Contenido del Estudio', href: '/generaciones/contenido' },
+	{ label: 'Contenido del Estudio', href: '/generaciones-de-turno/contenido' },
 	{ label: 'Fuentes', href: '#' },
 	{ label: 'Nomenclatura', href: '#' },
 	{ label: 'Metodología', href: '#' },
