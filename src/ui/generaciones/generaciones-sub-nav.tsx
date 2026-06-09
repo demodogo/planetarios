@@ -9,7 +9,7 @@ const tabs = [
 	{ label: 'Las Generaciones', href: '#' },
 	{ label: 'Cambio de Paradigma', href: '#' },
 	{ label: 'Contenido del Estudio', href: '/generaciones/contenido' },
-	{ label: 'Fuentes', href: '#' },
+	{ label: 'Fuentes', href: '/generaciones/fuentes' },
 	{ label: 'Nomenclatura', href: '#' },
 	{ label: 'Metodología', href: '#' },
 ];
