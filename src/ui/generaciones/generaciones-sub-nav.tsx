@@ -13,7 +13,10 @@ const tabs = [
 		label: 'Las Generaciones',
 		href: '/generaciones-de-turno/las-generaciones',
 	},
-    { label: 'Cambio de Paradigma', href: '/generaciones/cambio-paradigma' },
+	{
+		label: 'Cambio de Paradigma',
+		href: '/generaciones-de-turno/cambio-paradigma',
+	},
 	{ label: 'Contenido del Estudio', href: '/generaciones-de-turno/contenido' },
 	{ label: 'Fuentes', href: '/generaciones-de-turno/fuentes' },
 	{ label: 'Nomenclatura', href: '/generaciones-de-turno/nomenclatura' },
