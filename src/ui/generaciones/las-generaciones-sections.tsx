@@ -41,20 +41,21 @@ function GenerationCard({
 	imageHeight: number;
 }) {
 	return (
-		<article className="flex flex-col items-center text-center">
-			<div className="flex h-[13rem] items-end justify-center sm:h-[14.5rem]">
+		<article className="group relative flex flex-col items-center text-center">
+			<div className="relative z-10 h-[13rem] w-[12rem] sm:h-[14.5rem] sm:w-[13rem]">
+				<div className="absolute left-1/2 top-1/2 hidden h-[13.25rem] w-[6.5rem] -translate-x-1/2 -translate-y-1/2 rounded-[0.625rem] bg-[var(--brand-blue)] opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 lg:block" />
 				<Image
 					src={imageSrc}
 					alt={name}
 					width={imageWidth}
 					height={imageHeight}
-					className="h-auto w-auto max-h-[13rem] sm:max-h-[14.5rem]"
+					className="absolute bottom-0 left-1/2 z-10 h-auto max-h-[13rem] w-auto -translate-x-1/2 sm:max-h-[14.5rem]"
 				/>
 			</div>
-			<p className="font-heading mt-4 text-[1.05rem] font-semibold uppercase leading-[1.02] text-black">
+			<p className="relative z-10 font-heading mt-4 text-[1.05rem] font-semibold uppercase leading-[1.02] text-black transition-transform duration-300 ease-out group-hover:-translate-y-1">
 				{name}
 			</p>
-			<p className="font-heading mt-1 text-[1.2rem] font-bold leading-none text-black">
+			<p className="relative z-10 font-heading mt-1 text-[1.2rem] font-bold leading-none text-black transition-transform duration-300 ease-out group-hover:-translate-y-1">
 				{year}
 			</p>
 		</article>
