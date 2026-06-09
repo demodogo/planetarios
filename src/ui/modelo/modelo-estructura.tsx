@@ -1,4 +1,5 @@
-import { MODEL_RING_COLORS, ModeloVariableCard } from './modelo-variable-card';
+import { ModeloVariableCard } from './modelo-variable-card';
+import { MODEL_RING_COLORS } from './modelo-ring-colors';
 
 const items = [
 	{
