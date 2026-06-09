@@ -5,16 +5,16 @@ interface GeneracionesSubNavProps {
 }
 
 const tabs = [
-	{ label: 'Naturaleza del Estudio', href: '#' },
+	{ label: 'Naturaleza del Estudio', href: '/generaciones/naturaleza' },
 	{
 		label: 'Las Generaciones',
 		href: '/generaciones-de-turno/las-generaciones',
 	},
 	{ label: 'Cambio de Paradigma', href: '#' },
-	{ label: 'Contenido del Estudio', href: '/generaciones-de-turno/contenido' },
-	{ label: 'Fuentes', href: '#' },
-	{ label: 'Nomenclatura', href: '#' },
-	{ label: 'Metodología', href: '#' },
+	{ label: 'Contenido del Estudio', href: '/generaciones/contenido' },
+	{ label: 'Fuentes', href: '/generaciones/fuentes' },
+	{ label: 'Nomenclatura', href: '/generaciones/nomenclatura' },
+	{ label: 'Metodología', href: '/generaciones/metodologia' },
 ];
 
 export function GeneracionesSubNav({ activeTab }: GeneracionesSubNavProps) {
