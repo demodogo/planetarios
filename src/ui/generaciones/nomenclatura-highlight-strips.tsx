@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { ZoomImageHover } from './zoom-image-hover';
 
 import { HighlightStripCard } from '@/ui/shared/highlight-strip-card';
 
@@ -104,7 +105,7 @@ export function NomenclaturaHighlightStrips() {
 					su tiempo
 				</div>
 				<div className="mt-12 w-full max-w-[74.0625rem] xl:mt-16">
-					<Image
+					<ZoomImageHover
 						src="/escalera-generacional.png"
 						alt="Cuadrante generacional - escalera generacional"
 						width={1185}
