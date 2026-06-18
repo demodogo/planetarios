@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { ZoomImageHover } from './zoom-image-hover';
 
 import { HighlightStripCard } from '@/ui/shared/highlight-strip-card';
@@ -104,14 +103,13 @@ export function NomenclaturaHighlightStrips() {
 					agrupando jóvenes entre 20 y 29 años que van conformando la cultura de
 					su tiempo
 				</div>
-				<div className="mt-12 w-full max-w-[74.0625rem] xl:mt-16">
+				<div className="mt-12 -mx-5 w-[calc(100%+2.5rem)] sm:mx-0 sm:w-full max-w-[74.0625rem] xl:mt-16">
 					<ZoomImageHover
 						src="/escalera-generacional.png"
 						alt="Cuadrante generacional - escalera generacional"
 						width={1185}
 						height={449}
 						className="h-auto w-full"
-						priority
 					/>
 				</div>
 			</section>
