@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 
 interface GeneracionesSubNavProps {
 	activeTab?: string;
@@ -24,9 +27,31 @@ const tabs = [
 ];
 
 export function GeneracionesSubNav({ activeTab }: GeneracionesSubNavProps) {
+	const scrollRef = useRef<HTMLDivElement>(null);
+	const [scrollData, setScrollData] = useState({ progress: 0, thumbWidth: 100 });
+
+	const updateScroll = () => {
+		if (scrollRef.current) {
+			const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+			const progress = scrollWidth > clientWidth ? scrollLeft / (scrollWidth - clientWidth) : 0;
+			const thumbWidth = scrollWidth > clientWidth ? Math.max((clientWidth / scrollWidth) * 100, 10) : 100;
+			setScrollData({ progress, thumbWidth });
+		}
+	};
+
+	useEffect(() => {
+		updateScroll();
+		window.addEventListener('resize', updateScroll);
+		return () => window.removeEventListener('resize', updateScroll);
+	}, []);
+
 	return (
-		<nav className="w-full border-b border-black/10 bg-[var(--brand-yellow)]">
-			<div className="mobile-scroll-visible mx-auto flex w-full max-w-[80rem] items-center overflow-x-auto px-5 xl:px-[3.1875rem]">
+		<nav className="relative w-full border-b border-black/10 bg-[var(--brand-yellow)]">
+			<div 
+				ref={scrollRef}
+				onScroll={updateScroll}
+				className="mx-auto flex w-full max-w-[80rem] items-center overflow-x-auto px-5 xl:px-[3.1875rem] pb-1.5 [&::-webkit-scrollbar]:hidden lg:[&::-webkit-scrollbar]:block"
+			>
 				{tabs.map((tab, i) => {
 					const isActive = activeTab === tab.label;
 					return (
@@ -45,6 +70,19 @@ export function GeneracionesSubNav({ activeTab }: GeneracionesSubNavProps) {
 					);
 				})}
 			</div>
+			
+			{/* Custom Scrollbar for Mobile/Tablet */}
+			{scrollData.thumbWidth < 100 && (
+				<div className="absolute bottom-0 left-0 h-1.5 w-full bg-black/5 lg:hidden">
+					<div 
+						className="absolute top-0 h-full rounded-full bg-black/20"
+						style={{
+							width: `${scrollData.thumbWidth}%`,
+							left: `${scrollData.progress * (100 - scrollData.thumbWidth)}%`
+						}}
+					/>
+				</div>
+			)}
 		</nav>
 	);
 }

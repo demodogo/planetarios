@@ -113,18 +113,3 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... } // Macbook 16"
 .animate-pulse-tap {
 	animation: pulse-tap 2.5s ease-in-out infinite;
 }
-
-@media (max-width: 1023px) {
-	.mobile-scroll-visible::-webkit-scrollbar {
-		height: 6px;
-		display: block;
-		-webkit-appearance: none;
-	}
-	.mobile-scroll-visible::-webkit-scrollbar-track {
-		background: rgba(0, 0, 0, 0.05);
-	}
-	.mobile-scroll-visible::-webkit-scrollbar-thumb {
-		background: rgba(0, 0, 0, 0.2);
-		border-radius: 10px;
-	}
-}
