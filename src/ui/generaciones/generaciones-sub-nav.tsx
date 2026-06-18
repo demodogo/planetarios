@@ -26,7 +26,7 @@ const tabs = [
 export function GeneracionesSubNav({ activeTab }: GeneracionesSubNavProps) {
 	return (
 		<nav className="w-full border-b border-black/10 bg-[var(--brand-yellow)]">
-			<div className="mx-auto flex w-full max-w-[80rem] items-center overflow-x-auto px-5 xl:px-[3.1875rem]">
+			<div className="mobile-scroll-visible mx-auto flex w-full max-w-[80rem] items-center overflow-x-auto px-5 xl:px-[3.1875rem]">
 				{tabs.map((tab, i) => {
 					const isActive = activeTab === tab.label;
 					return (

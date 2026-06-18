@@ -32,7 +32,7 @@
 	--brand-purple: #762add;
 	--brand-lime: #c1e61e;
 	--brand-blue: #00b0f9;
-	--brand-yellow: #FFE940;
+	--brand-yellow: #ffe940;
 	--surface-muted: rgba(217, 217, 217, 0.28);
 	--surface-footer: #d9d9d9;
 	--header-height: 100px;
@@ -97,3 +97,34 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... } // Macbook 16"
 
 
 */
+
+@keyframes pulse-tap {
+	0%,
+	100% {
+		transform: scale(1);
+		opacity: 0.6;
+	}
+	50% {
+		transform: scale(0.99);
+		opacity: 0.4;
+	}
+}
+
+.animate-pulse-tap {
+	animation: pulse-tap 2.5s ease-in-out infinite;
+}
+
+@media (max-width: 1023px) {
+	.mobile-scroll-visible::-webkit-scrollbar {
+		height: 6px;
+		display: block;
+		-webkit-appearance: none;
+	}
+	.mobile-scroll-visible::-webkit-scrollbar-track {
+		background: rgba(0, 0, 0, 0.05);
+	}
+	.mobile-scroll-visible::-webkit-scrollbar-thumb {
+		background: rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
+	}
+}
