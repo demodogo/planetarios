@@ -114,9 +114,9 @@ export function LasGeneracionesGridSection() {
 export function LasGeneracionesAdditionalSection() {
 	return (
 		<section className="w-full">
-			<div className="bg-[#ffd3b6]">
+			<div className="w-full bg-[#ffd3b6] lg:w-1/2">
 				<div className="mx-auto w-full max-w-[80rem] px-5 py-8 sm:px-8 sm:py-10 xl:px-[3.1875rem]">
-					<h3 className="font-heading text-[2.1rem] font-bold uppercase leading-none text-black sm:text-[3.125rem]">
+					<h3 className="font-heading text-[3.125rem] font-bold uppercase leading-none text-black sm:text-[3rem]">
 						DATOS ADICIONALES
 					</h3>
 					<p className="font-body-prototype mt-3 max-w-[37.6875rem] text-[1.125rem] leading-[1.07] text-black/80 sm:text-[1.5625rem]">
