@@ -9,18 +9,18 @@ import { GeneracionesTempranasInfo } from './info/generaciones-tempranas-info';
 export function NomenclaturaHighlightStrips() {
 	return (
 		<div className="flex w-full flex-col">
-			{/* Hero centrado */}
 			<section className="mx-auto w-full max-w-[80rem] px-5 pb-10 pt-14 text-center sm:px-8 xl:px-[3.1875rem] xl:pb-16 xl:pt-[4.8125rem]">
-				<h1 className="font-heading text-[3.125rem] font-bold uppercase leading-[1] text-black xl:text-[4.6875rem]">
+				<h1 className="font-heading text-[2.5rem] md:text-[3.125rem] font-bold uppercase leading-[1] text-black xl:text-[4.6875rem]">
 					NOMENCLATURA
 				</h1>
 				<div className="font-body-prototype mx-auto mt-6 flex max-w-[42.875rem] flex-col gap-4 text-[1.0625rem] leading-[1.07] text-black/80 xl:mt-8 xl:text-[1.5625rem]">
 					<p>
 						Cada generación de turno la denominamos con los mismos nombres que
 						utiliza la mayoría de las fuentes, por ejemplo,
-						&ldquo;Babyboomer&rdquo;, &ldquo;GenX&rdquo; o &ldquo;Millennial&rdquo;.
-						Sin embargo nosotros no usamos las mismas fechas que usan muchos para
-						establecer el período que cubre cada generación.
+						&ldquo;Babyboomer&rdquo;, &ldquo;GenX&rdquo; o
+						&ldquo;Millennial&rdquo;. Sin embargo nosotros no usamos las mismas
+						fechas que usan muchos para establecer el período que cubre cada
+						generación.
 					</p>
 					<p>
 						Nosotros utilizamos nuestras propias fechas: consideramos para cada
@@ -28,8 +28,6 @@ export function NomenclaturaHighlightStrips() {
 					</p>
 				</div>
 			</section>
-
-			{/* Strip 1 - Fecha de militancia */}
 			<section className="flex w-full flex-col overflow-x-hidden pt-4 xl:pt-0">
 				<HighlightStripCard
 					title={'FECHA DE MILITANCIA,\nNO DE NACIMIENTO'}
@@ -45,7 +43,6 @@ export function NomenclaturaHighlightStrips() {
 				/>
 			</section>
 
-			{/* Sección Convención (salmón centrado) */}
 			<section className="mt-12 w-full bg-[#ffd3b6] px-5 py-12 text-center sm:px-8 sm:py-16 md:mt-14 xl:mt-[3.5rem] xl:px-[3.1875rem] xl:py-[4.5rem]">
 				<div className="mx-auto max-w-[80rem]">
 					<h2 className="font-heading text-[2.5rem] font-bold uppercase leading-[1] text-black sm:text-[3rem] xl:text-[3.125rem]">
@@ -54,16 +51,15 @@ export function NomenclaturaHighlightStrips() {
 					<p className="font-body-prototype mx-auto mt-6 max-w-[54.125rem] text-[1.0625rem] leading-[1.07] text-black/80 xl:mt-8 xl:text-[1.5625rem]">
 						El acuerdo de asignar 10 años regulares a cada generación, y hacerla
 						coincidir con el comienzo y final de la década, no es exacta ni
-						totalmente coincidente con el resto de autores. Sin embargo, tiene el
-						beneficio de ser un método simple, práctico, fácil de recordar y de
-						aplicar cuando se trata de entender el comportamiento de grupos etários
-						en una ecuación de negocios.
+						totalmente coincidente con el resto de autores. Sin embargo, tiene
+						el beneficio de ser un método simple, práctico, fácil de recordar y
+						de aplicar cuando se trata de entender el comportamiento de grupos
+						etários en una ecuación de negocios.
 					</p>
 				</div>
 			</section>
 
-			{/* Strip 2 - Tempranas y tardías */}
-			<section className="mt-12 flex w-full flex-col overflow-x-hidden md:mt-14 xl:mt-[3.5rem]">
+			<section className="mt-12 flex w-full flex-col overflow-x-hidden md:mt-14 xl:mt-[8rem]">
 				<HighlightStripCard
 					title={'GENERACIONES\nTEMPRANAS Y TARDIAS'}
 					alignment="left"
@@ -78,23 +74,21 @@ export function NomenclaturaHighlightStrips() {
 				/>
 			</section>
 
-			{/* Strip 3 - Generaciones sobrepuestas */}
 			<section className="mt-12 flex w-full flex-col overflow-x-hidden md:mt-14 xl:mt-[3.5rem]">
 				<HighlightStripCard
 					title={'GENERACIONES\nSOBREPUESTAS'}
 					alignment="right"
 					backgroundColor="#ffd3b6"
-                    barWidth={1000}
-                    barHeight={129}
-                    titleWidth={679}
-                    titleOffsetX={60}
-                    titleOffsetY={18}
+					barWidth={1000}
+					barHeight={129}
+					titleWidth={679}
+					titleOffsetX={60}
+					titleOffsetY={18}
 					infoCardContent={<GeneracionesSobrepuestasInfo />}
 					infoTitleSide="left"
 				/>
 			</section>
 
-			{/* Sección Cuadrante Generacional */}
 			<section className="mx-auto mt-12 flex w-full max-w-[80rem] flex-col items-center px-5 pb-24 pt-14 text-center sm:px-8 md:mt-14 xl:mt-[3.5rem] xl:px-[3.1875rem] xl:pb-[6.5rem] xl:pt-[4.8125rem]">
 				<h2 className="font-heading text-[2.5rem] font-bold uppercase leading-[1] text-black sm:text-[3rem] xl:text-[4.6875rem]">
 					CUADRANTE
@@ -102,18 +96,12 @@ export function NomenclaturaHighlightStrips() {
 					GENERACIONAL
 				</h2>
 				<div className="font-body-prototype mx-auto mt-6 flex max-w-[39.1875rem] flex-col gap-4 text-[1.0625rem] leading-[1.07] text-black/80 xl:mt-8 xl:text-[1.5625rem]">
-					<p className="font-bold">Cuadrante generacional</p>
-					<p>
-						Esto significa que una misma generación de turno militará durante dos
-						décadas, pero a cada década se le asigna —por convención— el nombre de
-						la generación entrante (&ldquo;cuadrante generacional&rdquo;)
-					</p>
-					<p className="font-bold">Cultura epocal</p>
-					<p>
-						Las generaciones de turno son como olas que se forman y avanzan durante
-						dos décadas agrupando jóvenes entre 20 y 29 años que van conformando la
-						cultura de su tiempo (cuadro 4)
-					</p>
+					Esto significa que una misma generación de turno militará durante dos
+					décadas, pero a cada década se le asigna –por convención- el nombre de
+					la generación entrante (“cuadrante generacional”) Las generaciones de
+					turno son como olas que se forman y avanzan durante dos décadas
+					agrupando jóvenes entre 20 y 29 años que van conformando la cultura de
+					su tiempo
 				</div>
 				<div className="mt-12 w-full max-w-[74.0625rem] xl:mt-16">
 					<Image
