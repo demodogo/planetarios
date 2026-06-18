@@ -102,7 +102,7 @@ export function LasGeneracionesGridSection() {
 					{sixGenerationsIntro}
 				</p>
 			</div>
-			<div className="mt-14 grid grid-cols-1 gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-18">
+			<div className="mt-14 grid grid-cols-2 gap-x-10 gap-y-14 lg:grid-cols-3 lg:gap-y-18">
 				{sixGenerations.map((generation) => (
 					<GenerationCard key={generation.name} {...generation} />
 				))}
