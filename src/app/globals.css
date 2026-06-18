@@ -97,3 +97,19 @@ xl	80rem (1280px)	@media (width >= 80rem) { ... } // Macbook 16"
 
 
 */
+
+@keyframes pulse-tap {
+	0%,
+	100% {
+		transform: scale(1);
+		opacity: 0.6;
+	}
+	50% {
+		transform: scale(0.99);
+		opacity: 0.4;
+	}
+}
+
+.animate-pulse-tap {
+	animation: pulse-tap 2.5s ease-in-out infinite;
+}
