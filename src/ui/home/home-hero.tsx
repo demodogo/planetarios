@@ -11,7 +11,7 @@ export function HomeHero() {
 						80% { color: #fa6907; }
 					}
 					.animate-color-change {
-						animation: color-change 20s infinite;
+						animation: color-change 6s infinite;
 					}
 				`}
 			</style>

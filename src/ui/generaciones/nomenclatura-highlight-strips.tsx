@@ -103,7 +103,7 @@ export function NomenclaturaHighlightStrips() {
 					agrupando jóvenes entre 20 y 29 años que van conformando la cultura de
 					su tiempo
 				</div>
-				<div className="mt-12 -mx-5 w-[calc(100%+2.5rem)] sm:mx-0 sm:w-full max-w-[74.0625rem] xl:mt-16">
+				<div className="mt-12 -ml-3 -mr-8 w-[calc(100%+2.75rem)] sm:mx-0 sm:w-full max-w-[74.0625rem] xl:mt-16">
 					<ZoomImageHover
 						src="/escalera-generacional.png"
 						alt="Cuadrante generacional - escalera generacional"

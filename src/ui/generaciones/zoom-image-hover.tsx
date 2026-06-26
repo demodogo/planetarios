@@ -30,7 +30,7 @@ export function ZoomImageHover(props: ImageProps) {
 	return (
 		<div className="relative flex w-full flex-col items-start">
 			<div className="mb-2 flex w-full items-center justify-start gap-1.5 text-black/50 md:hidden">
-				<PinchIcon className="h-5 w-5 shrink-0" />
+				<PinchIcon className="h-7 w-7 shrink-0" />
 				<span className="font-body-prototype whitespace-nowrap text-[0.7rem] font-bold uppercase tracking-wider">
 					Pinch para acercar
 				</span>
