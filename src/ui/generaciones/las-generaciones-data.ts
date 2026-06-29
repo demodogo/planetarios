@@ -19,6 +19,8 @@ export const sixGenerations = [
 		imageSrc: '/generaciones/baby_boomers.png',
 		imageWidth: 168,
 		imageHeight: 247,
+		templateSrc: '/generaciones/laminas/desktop/babyboomers.png',
+		templateMobileSrc: '/generaciones/laminas/mobile/baby-boomers.png',
 	},
 	{
 		name: 'GEN X TEMPRANA',
@@ -26,6 +28,8 @@ export const sixGenerations = [
 		imageSrc: '/generaciones/gen_x_temprana.png',
 		imageWidth: 194,
 		imageHeight: 223,
+		templateSrc: '/generaciones/laminas/desktop/gen-x.png',
+		templateMobileSrc: '/generaciones/laminas/mobile/gen-x-early.png',
 	},
 	{
 		name: 'GEN X TARDÍA',
@@ -33,6 +37,8 @@ export const sixGenerations = [
 		imageSrc: '/generaciones/gen_x_tardia.png',
 		imageWidth: 190,
 		imageHeight: 223,
+		templateSrc: '/generaciones/laminas/desktop/gen-x-late.png',
+		templateMobileSrc: '/generaciones/laminas/mobile/gen-x-late.png',
 	},
 	{
 		name: 'MILENNIALS TEMPRANA',
@@ -40,6 +46,8 @@ export const sixGenerations = [
 		imageSrc: '/generaciones/milennials_temprana.png',
 		imageWidth: 162,
 		imageHeight: 240,
+		templateSrc: '/generaciones/laminas/desktop/millenial-early.png',
+		templateMobileSrc: '/generaciones/laminas/mobile/millenial-early.png',
 	},
 	{
 		name: 'MILENNIALS TARDÍA',
@@ -47,6 +55,8 @@ export const sixGenerations = [
 		imageSrc: '/generaciones/milennials_tardia.png',
 		imageWidth: 174,
 		imageHeight: 240,
+		templateSrc: '/generaciones/laminas/desktop/millenial-late.png',
+		templateMobileSrc: '/generaciones/laminas/mobile/millenial-late.png',
 	},
 	{
 		name: 'CENTENIALS',
@@ -54,6 +64,8 @@ export const sixGenerations = [
 		imageSrc: '/generaciones/centenials.png',
 		imageWidth: 178,
 		imageHeight: 239,
+		templateSrc: '/generaciones/laminas/desktop/centenials.png',
+		templateMobileSrc: '/generaciones/laminas/mobile/centennials.png',
 	},
 ];
 
@@ -61,9 +73,13 @@ export const silentGenerations = [
 	{
 		name: 'SILENCIOSA TEMPRANA',
 		years: '1950 - 1959',
+		templateSrc: '/generaciones/laminas/desktop/silent-early.png',
+		templateMobileSrc: '/generaciones/laminas/mobile/silenciosa-early.png',
 	},
 	{
 		name: 'SILENCIOSA TARDÍA',
 		years: '1960 - 1969',
+		templateSrc: '/generaciones/laminas/desktop/silent-late.png',
+		templateMobileSrc: '/generaciones/laminas/mobile/silenciosa-late.png',
 	},
 ];
