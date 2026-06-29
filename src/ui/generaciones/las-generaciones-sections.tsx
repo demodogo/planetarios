@@ -135,6 +135,7 @@ export function LasGeneracionesGridSection() {
 				<GenerationLaminaModal
 					name={selectedGeneration.name}
 					templateSrc={selectedGeneration.templateSrc}
+					templateMobileSrc={selectedGeneration.templateMobileSrc}
 					onClose={() => setSelectedGeneration(null)}
 				/>
 			)}
@@ -209,6 +210,7 @@ export function LasGeneracionesAdditionalSection() {
 				<GenerationLaminaModal
 					name={selectedGeneration.name}
 					templateSrc={selectedGeneration.templateSrc}
+					templateMobileSrc={selectedGeneration.templateMobileSrc}
 					onClose={() => setSelectedGeneration(null)}
 				/>
 			)}

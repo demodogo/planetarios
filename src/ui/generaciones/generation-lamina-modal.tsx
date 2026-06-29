@@ -6,12 +6,14 @@ import { useEffect, useRef } from 'react';
 interface GenerationLaminaModalProps {
 	name: string;
 	templateSrc: string;
+	templateMobileSrc: string;
 	onClose: () => void;
 }
 
 export function GenerationLaminaModal({
 	name,
 	templateSrc,
+	templateMobileSrc,
 	onClose,
 }: GenerationLaminaModalProps) {
 	const overlayRef = useRef<HTMLDivElement>(null);
@@ -74,14 +76,15 @@ export function GenerationLaminaModal({
 				</button>
 
 				<div className="overflow-hidden rounded-xl shadow-2xl">
-					<Image
-						src={templateSrc}
-						alt={`Lámina técnica ${name}`}
-						width={1200}
-						height={900}
-						className="h-auto max-h-[85dvh] w-auto max-w-[90vw] object-contain"
-						priority
-					/>
+					<picture>
+						<source media="(min-width: 640px)" srcSet={templateSrc} />
+						<source media="(max-width: 639px)" srcSet={templateMobileSrc} />
+						<img
+							src={templateSrc}
+							alt={`Lámina técnica ${name}`}
+							className="h-auto max-h-[85dvh] w-auto max-w-[90vw] object-contain"
+						/>
+					</picture>
 				</div>
 			</div>
 		</div>
