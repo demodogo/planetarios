@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
@@ -39,7 +39,7 @@ export function GenerationLaminaModal({
 			ref={overlayRef}
 			onClick={handleOverlayClick}
 			style={{ animation: 'lamina-overlay-in 0.25s ease-out forwards' }}
-			className="fixed inset-0 z-[200] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+			className="fixed inset-0 z-[200] flex items-center justify-center bg-black/70 p-0 backdrop-blur-sm sm:p-4"
 		>
 			<style>{`
 				@keyframes lamina-overlay-in {
@@ -50,15 +50,28 @@ export function GenerationLaminaModal({
 					from { opacity: 0; transform: scale(0.92); }
 					to { opacity: 1; transform: scale(1); }
 				}
+				.lamina-img {
+					height: auto;
+					width: 100vw;
+					max-height: 100dvh;
+					object-fit: contain;
+				}
+				@media (min-width: 640px) {
+					.lamina-img {
+						width: auto;
+						max-width: 90vw;
+						max-height: 85dvh;
+					}
+				}
 			`}</style>
 			<div
 				style={{ animation: 'lamina-content-in 0.28s cubic-bezier(0.34,1.56,0.64,1) forwards' }}
-				className="relative flex max-h-[90dvh] max-w-[95vw] flex-col items-center"
+				className="relative flex w-full flex-col items-center sm:w-auto sm:max-w-[95vw]"
 			>
 				<button
 					onClick={onClose}
 					aria-label="Cerrar"
-					className="absolute -right-3 -top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-black/10 transition-transform duration-150 hover:scale-110 active:scale-95 sm:-right-4 sm:-top-4 sm:h-10 sm:w-10"
+					className="fixed right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-black/10 transition-transform duration-150 hover:scale-110 active:scale-95 sm:absolute sm:-right-4 sm:-top-4"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -81,8 +94,8 @@ export function GenerationLaminaModal({
 						<source media="(max-width: 639px)" srcSet={templateMobileSrc} />
 						<img
 							src={templateSrc}
-							alt={`Lámina técnica ${name}`}
-							className="h-auto max-h-[85dvh] w-auto max-w-[90vw] object-contain"
+							alt={`Lamina tecnica ${name}`}
+							className="lamina-img"
 						/>
 					</picture>
 				</div>
