@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { useState } from 'react';
 import {
 	additionalDataIntro,
 	documentaryNote,
@@ -7,6 +10,7 @@ import {
 	sixGenerations,
 	sixGenerationsIntro,
 } from './las-generaciones-data';
+import { GenerationLaminaModal } from './generation-lamina-modal';
 
 function SectionTitle({
 	firstLine,
@@ -33,15 +37,24 @@ function GenerationCard({
 	imageSrc,
 	imageWidth,
 	imageHeight,
+	onClick,
 }: {
 	name: string;
 	year: string;
 	imageSrc: string;
 	imageWidth: number;
 	imageHeight: number;
+	onClick: () => void;
 }) {
 	return (
-		<article className="group relative flex flex-col items-center text-center">
+		<article
+			className="group relative flex cursor-pointer flex-col items-center text-center"
+			onClick={onClick}
+			role="button"
+			tabIndex={0}
+			onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onClick()}
+			aria-label={`Ver ficha técnica ${name}`}
+		>
 			<div className="relative z-10 h-[13rem] w-[12rem] sm:h-[14.5rem] sm:w-[13rem]">
 				<div className="absolute left-1/2 top-1/2 hidden h-[13.25rem] w-[6.5rem] -translate-x-1/2 -translate-y-1/2 rounded-[0.625rem] bg-[var(--brand-blue)] opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 lg:block" />
 				<Image
@@ -49,7 +62,7 @@ function GenerationCard({
 					alt={name}
 					width={imageWidth}
 					height={imageHeight}
-					className="absolute bottom-0 left-1/2 z-10 h-auto max-h-[13rem] w-auto -translate-x-1/2 sm:max-h-[14.5rem]"
+					className="absolute bottom-0 left-1/2 z-10 h-auto max-h-[13rem] w-auto -translate-x-1/2 transition-transform duration-300 ease-out group-hover:scale-105 sm:max-h-[14.5rem]"
 				/>
 			</div>
 			<p className="relative z-10 font-heading mt-4 text-[1.05rem] font-semibold uppercase leading-[1.02] text-black transition-transform duration-300 ease-out group-hover:-translate-y-1">
@@ -94,20 +107,39 @@ export function LasGeneracionesIntroSection() {
 }
 
 export function LasGeneracionesGridSection() {
+	const [selectedGeneration, setSelectedGeneration] = useState<
+		(typeof sixGenerations)[0] | null
+	>(null);
+
 	return (
-		<section className="mx-auto w-full max-w-[80rem] px-5 pb-20 sm:px-8 sm:pb-28 xl:px-[3.1875rem]">
-			<div className="max-w-[54rem]">
-				<SectionTitle firstLine="SEIS" secondLine="GENERACIONES" />
-				<p className="font-body-prototype mt-4 max-w-[53.5rem] text-[1.125rem] leading-[1.07] text-black/80 sm:text-[1.5625rem]">
-					{sixGenerationsIntro}
-				</p>
-			</div>
-			<div className="mt-14 grid grid-cols-2 gap-x-10 gap-y-14 lg:grid-cols-3 lg:gap-y-18">
-				{sixGenerations.map((generation) => (
-					<GenerationCard key={generation.name} {...generation} />
-				))}
-			</div>
-		</section>
+		<>
+			<section className="mx-auto w-full max-w-[80rem] px-5 pb-20 sm:px-8 sm:pb-28 xl:px-[3.1875rem]">
+				<div className="max-w-[54rem]">
+					<SectionTitle firstLine="SEIS" secondLine="GENERACIONES" />
+					<p className="font-body-prototype mt-4 max-w-[53.5rem] text-[1.125rem] leading-[1.07] text-black/80 sm:text-[1.5625rem]">
+						{sixGenerationsIntro}
+					</p>
+				</div>
+				<div className="mt-14 grid grid-cols-2 gap-x-10 gap-y-14 lg:grid-cols-3 lg:gap-y-18">
+					{sixGenerations.map((generation) => (
+						<GenerationCard
+							key={generation.name}
+							{...generation}
+							onClick={() => setSelectedGeneration(generation)}
+						/>
+					))}
+				</div>
+			</section>
+
+			{selectedGeneration && (
+				<GenerationLaminaModal
+					name={selectedGeneration.name}
+					templateSrc={selectedGeneration.templateSrc}
+					templateMobileSrc={selectedGeneration.templateMobileSrc}
+					onClose={() => setSelectedGeneration(null)}
+				/>
+			)}
+		</>
 	);
 }
 

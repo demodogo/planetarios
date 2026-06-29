@@ -19,6 +19,8 @@ export const sixGenerations = [
 		imageSrc: '/generaciones/baby_boomers.png',
 		imageWidth: 168,
 		imageHeight: 247,
+		templateSrc: '/generaciones/laminas/babyboomers.png',
+		templateMobileSrc: '/generaciones/laminas/mobile/babyboomers.png',
 	},
 	{
 		name: 'GEN X TEMPRANA',
@@ -26,6 +28,8 @@ export const sixGenerations = [
 		imageSrc: '/generaciones/gen_x_temprana.png',
 		imageWidth: 194,
 		imageHeight: 223,
+		templateSrc: '/generaciones/laminas/gen-x.png',
+		templateMobileSrc: '/generaciones/laminas/mobile/gen-x-early.png',
 	},
 	{
 		name: 'GEN X TARDÍA',
@@ -33,6 +37,8 @@ export const sixGenerations = [
 		imageSrc: '/generaciones/gen_x_tardia.png',
 		imageWidth: 190,
 		imageHeight: 223,
+		templateSrc: '/generaciones/laminas/gen-x-late.png',
+		templateMobileSrc: '/generaciones/laminas/mobile/gen-x-late.png',
 	},
 	{
 		name: 'MILENNIALS TEMPRANA',
@@ -40,6 +46,8 @@ export const sixGenerations = [
 		imageSrc: '/generaciones/milennials_temprana.png',
 		imageWidth: 162,
 		imageHeight: 240,
+		templateSrc: '/generaciones/laminas/millenial-early.png',
+		templateMobileSrc: '/generaciones/laminas/mobile/millenial-early.png',
 	},
 	{
 		name: 'MILENNIALS TARDÍA',
@@ -47,6 +55,8 @@ export const sixGenerations = [
 		imageSrc: '/generaciones/milennials_tardia.png',
 		imageWidth: 174,
 		imageHeight: 240,
+		templateSrc: '/generaciones/laminas/millenial-late.png',
+		templateMobileSrc: '/generaciones/laminas/mobile/millenial-late.png',
 	},
 	{
 		name: 'CENTENIALS',
@@ -54,6 +64,8 @@ export const sixGenerations = [
 		imageSrc: '/generaciones/centenials.png',
 		imageWidth: 178,
 		imageHeight: 239,
+		templateSrc: '/generaciones/laminas/centenials.png',
+		templateMobileSrc: '/generaciones/laminas/mobile/centenials.png',
 	},
 ];
 
