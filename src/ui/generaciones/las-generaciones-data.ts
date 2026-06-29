@@ -73,9 +73,11 @@ export const silentGenerations = [
 	{
 		name: 'SILENCIOSA TEMPRANA',
 		years: '1950 - 1959',
+		templateSrc: '/generaciones/laminas/silent-early.png',
 	},
 	{
 		name: 'SILENCIOSA TARDÍA',
 		years: '1960 - 1969',
+		templateSrc: '/generaciones/laminas/silent-late.png',
 	},
 ];
