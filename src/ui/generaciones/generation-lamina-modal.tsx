@@ -1,6 +1,5 @@
 ﻿'use client';
 
-import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
 interface GenerationLaminaModalProps {
@@ -23,10 +22,16 @@ export function GenerationLaminaModal({
 			if (e.key === 'Escape') onClose();
 		};
 		document.addEventListener('keydown', handleKey);
-		document.body.style.overflow = 'hidden';
+		const scrollY = window.scrollY;
+		document.body.style.position = 'fixed';
+		document.body.style.top = `-${scrollY}px`;
+		document.body.style.width = '100%';
 		return () => {
 			document.removeEventListener('keydown', handleKey);
-			document.body.style.overflow = '';
+			document.body.style.position = '';
+			document.body.style.top = '';
+			document.body.style.width = '';
+			window.scrollTo(0, scrollY);
 		};
 	}, [onClose]);
 
@@ -39,7 +44,7 @@ export function GenerationLaminaModal({
 			ref={overlayRef}
 			onClick={handleOverlayClick}
 			style={{ animation: 'lamina-overlay-in 0.25s ease-out forwards' }}
-			className="fixed inset-0 z-[200] flex items-center justify-center bg-black/70 p-0 backdrop-blur-sm sm:p-4"
+			className="fixed inset-0 z-[200] overflow-y-auto overscroll-contain bg-black/70 backdrop-blur-sm sm:flex sm:items-center sm:justify-center sm:overflow-hidden sm:p-4"
 		>
 			<style>{`
 				@keyframes lamina-overlay-in {
@@ -52,15 +57,15 @@ export function GenerationLaminaModal({
 				}
 				.lamina-img {
 					height: auto;
-					width: 100vw;
-					max-height: 100dvh;
-					object-fit: contain;
+					width: 100%;
+					display: block;
 				}
 				@media (min-width: 640px) {
 					.lamina-img {
 						width: auto;
 						max-width: 90vw;
 						max-height: 85dvh;
+						object-fit: contain;
 					}
 				}
 			`}</style>
@@ -71,7 +76,7 @@ export function GenerationLaminaModal({
 				<button
 					onClick={onClose}
 					aria-label="Cerrar"
-					className="fixed right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-black/10 transition-transform duration-150 hover:scale-110 active:scale-95 sm:absolute sm:-right-4 sm:-top-4"
+					className="fixed right-3 top-3 z-[201] flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-black/10 transition-transform duration-150 hover:scale-110 active:scale-95 sm:absolute sm:-right-4 sm:-top-4"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +93,7 @@ export function GenerationLaminaModal({
 					</svg>
 				</button>
 
-				<div className="overflow-hidden rounded-xl shadow-2xl">
+				<div className="w-full overflow-hidden sm:rounded-xl sm:shadow-2xl">
 					<picture>
 						<source media="(min-width: 640px)" srcSet={templateSrc} />
 						<source media="(max-width: 639px)" srcSet={templateMobileSrc} />
