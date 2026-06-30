@@ -11,6 +11,71 @@ import { PocaFeInfo } from './info/poca-fe-info';
 import { SinFanatsismoInfo } from './info/sin-fanatismo-info';
 import { DesinteresSistemaInfo } from './info/desinteres-sistema-info';
 
+type ValorItem = { label: string; color: string };
+
+function ValoresGrid({
+	leftValues,
+	rightValues,
+	imageSrc,
+	imageWidth,
+	imageHeight,
+}: {
+	leftValues: ValorItem[];
+	rightValues: ValorItem[];
+	imageSrc: string;
+	imageWidth: number;
+	imageHeight: number;
+}) {
+	return (
+		<div className="mx-auto mt-10 max-w-[62rem]">
+			<style>{`
+				.valores-mobile { display: flex; }
+				.valores-desktop { display: none; }
+				@media (min-width: 768px) {
+					.valores-mobile { display: none; }
+					.valores-desktop { display: flex; }
+				}
+			`}</style>
+			{/* Mobile: palabras arriba, imagen, palabras abajo */}
+			<div className="valores-mobile flex-col items-center gap-4">
+				<div className="flex flex-wrap justify-center gap-x-6 gap-y-1">
+					{leftValues.map((v) => (
+						<p key={v.label} className="font-heading text-[1.25rem] font-bold uppercase leading-tight" style={{ color: v.color }}>{v.label}</p>
+					))}
+				</div>
+				<div className="my-4 flex justify-center">
+					<div className="overflow-hidden rounded-[1.25rem] bg-[#00b0cd] p-2">
+						<Image src={imageSrc} alt="" width={imageWidth} height={imageHeight} className="h-auto w-[10rem]" />
+					</div>
+				</div>
+				<div className="flex flex-wrap justify-center gap-x-6 gap-y-1">
+					{rightValues.map((v) => (
+						<p key={v.label} className="font-heading text-[1.25rem] font-bold uppercase leading-tight" style={{ color: v.color }}>{v.label}</p>
+					))}
+				</div>
+			</div>
+			{/* Desktop: 3 columnas */}
+			<div className="valores-desktop flex-row items-center justify-center gap-4 xl:gap-6">
+				<div className="flex flex-1 flex-col gap-3 text-right xl:gap-5">
+					{leftValues.map((v) => (
+						<p key={v.label} className="font-heading text-[2.5rem] font-bold uppercase leading-tight" style={{ color: v.color }}>{v.label}</p>
+					))}
+				</div>
+				<div className="shrink-0">
+					<div className="overflow-hidden rounded-[1.25rem] bg-[#00b0cd] p-2 xl:p-3">
+						<Image src={imageSrc} alt="" width={imageWidth} height={imageHeight} className="h-auto w-[20rem] xl:w-[30rem]" />
+					</div>
+				</div>
+				<div className="flex flex-1 flex-col gap-3 text-left xl:gap-5">
+					{rightValues.map((v) => (
+						<p key={v.label} className="font-heading text-[2.5rem] font-bold uppercase leading-tight" style={{ color: v.color }}>{v.label}</p>
+					))}
+				</div>
+			</div>
+		</div>
+	);
+}
+
 const millenialsLeftValues = [
 	{ label: 'SUSTENTABILIDAD', color: '#6e8f00' },
 	{ label: 'TECNOLOGÍA', color: '#00b3eb' },
@@ -99,11 +164,11 @@ export function CambioParadigmaHighlightStrips() {
 					title={'CREENCIAS CON\nSENTIDO VALÓRICO'}
 					alignment="left"
 					backgroundColor="#ffd3b6"
-					barWidth={1000}
-					barHeight={129}
-					titleWidth={679}
-					titleOffsetX={250}
-					titleOffsetY={18}
+                    barWidth={1000}
+                    barHeight={129}
+                    titleWidth={679}
+                    titleOffsetX={250}
+                    titleOffsetY={18}
 					infoCardContent={<CreenciasValoricasInfo />}
 					infoTitleSide="right"
 				/>
@@ -165,46 +230,13 @@ export function CambioParadigmaHighlightStrips() {
 				</p>
 
 				{/* Grilla de valores con figura central - Millennials */}
-				<div className="mx-auto mt-10 flex max-w-[62rem] flex-row items-center justify-center gap-2 xl:gap-4">
-					{/* Columna izquierda */}
-					<div className="flex flex-1 flex-col gap-2 text-right xl:gap-4">
-						{millenialsLeftValues.map((v) => (
-							<p
-								key={v.label}
-								className="font-heading text-[3rem] font-bold uppercase leading-tight"
-								style={{ color: v.color }}
-							>
-								{v.label}
-							</p>
-						))}
-					</div>
-
-					{/* Figura central */}
-					<div className="shrink-0">
-						<div className="overflow-hidden rounded-[1.25rem] bg-[#00b0cd] p-2 xl:p-3">
-							<Image
-								src="/millennial-figura-der.png"
-								alt=""
-								width={390}
-								height={322}
-								className="h-auto w-[8rem] sm:w-[11rem] xl:w-[16rem]"
-							/>
-						</div>
-					</div>
-
-					{/* Columna derecha */}
-					<div className="flex flex-1 flex-col gap-2 text-left xl:gap-4">
-						{millenialsRightValues.map((v) => (
-							<p
-								key={v.label}
-								className="font-heading text-[3rem] font-bold uppercase leading-tight"
-								style={{ color: v.color }}
-							>
-								{v.label}
-							</p>
-						))}
-					</div>
-				</div>
+				<ValoresGrid
+					leftValues={millenialsLeftValues}
+					rightValues={millenialsRightValues}
+					imageSrc="/millennial-figura-der.png"
+					imageWidth={390}
+					imageHeight={294}
+				/>
 			</section>
 
 			{/* Strip verde: INSTALAN VALORES MIENTRAS SON JÓVENES (izquierda) */}
@@ -213,11 +245,11 @@ export function CambioParadigmaHighlightStrips() {
 					title={'INSTALAN VALORES\nMIENTRAS SON JÓVENES'}
 					alignment="left"
 					backgroundColor="#c1e61e"
-					barWidth={924}
-					barHeight={128}
-					titleWidth={679}
-					titleOffsetX={190}
-					titleOffsetY={18}
+                    barWidth={1000}
+                    barHeight={129}
+                    titleWidth={679}
+                    titleOffsetX={250}
+                    titleOffsetY={18}
 					infoCardContent={<InstalarValoresInfo />}
 					infoTitleSide="right"
 				/>
@@ -229,11 +261,11 @@ export function CambioParadigmaHighlightStrips() {
 					title={'GRACIAS A LA\nTECNOLOGÍA'}
 					alignment="right"
 					backgroundColor="#fa6907"
-					barWidth={814}
-					barHeight={129}
-					titleWidth={502}
-					titleOffsetX={60}
-					titleOffsetY={18}
+                    barWidth={1000}
+                    barHeight={129}
+                    titleWidth={679}
+                    titleOffsetX={60}
+                    titleOffsetY={18}
 					infoCardContent={<GraciasTecnologiaInfo />}
 					infoTitleSide="left"
 				/>
@@ -253,46 +285,13 @@ export function CambioParadigmaHighlightStrips() {
 				</p>
 
 				{/* Grilla de valores con figura central - Centennials */}
-				<div className="mx-auto mt-10 flex max-w-[62rem] flex-row items-center justify-center gap-2 xl:gap-4">
-					{/* Columna izquierda */}
-					<div className="flex flex-1 flex-col gap-2 text-right xl:gap-6">
-						{millenialsLeftValues.map((v) => (
-							<p
-								key={v.label}
-								className="font-heading text-[3rem] font-bold uppercase leading-tight"
-								style={{ color: v.color }}
-							>
-								{v.label}
-							</p>
-						))}
-					</div>
-
-					{/* Figura central - Centennials */}
-					<div className="shrink-0">
-						<div className="overflow-hidden rounded-[1.25rem] bg-[#00b0cd] p-2 xl:p-3">
-							<Image
-								src="/generaciones/centenials.png"
-								alt=""
-								width={390}
-								height={294}
-								className="h-auto w-[8rem] sm:w-[11rem] xl:w-[30rem]"
-							/>
-						</div>
-					</div>
-
-					{/* Columna derecha */}
-					<div className="flex flex-1 flex-col gap-2 text-left xl:gap-4">
-						{millenialsRightValues.map((v) => (
-							<p
-								key={v.label}
-								className="font-heading text-[3rem] font-bold uppercase leading-tight"
-								style={{ color: v.color }}
-							>
-								{v.label}
-							</p>
-						))}
-					</div>
-				</div>
+				<ValoresGrid
+					leftValues={millenialsLeftValues}
+					rightValues={millenialsRightValues}
+					imageSrc="/generaciones/centenials.png"
+					imageWidth={490}
+					imageHeight={294}
+				/>
 			</section>
 
 			{/* Strip verde: POCA FE EN EL FUTURO (izquierda) */}
@@ -301,11 +300,11 @@ export function CambioParadigmaHighlightStrips() {
 					title={'POCA FE EN\nEL FUTURO'}
 					alignment="left"
 					backgroundColor="#c1e61e"
-					barWidth={924}
-					barHeight={128}
-					titleWidth={679}
-					titleOffsetX={190}
-					titleOffsetY={18}
+                    barWidth={1000}
+                    barHeight={129}
+                    titleWidth={679}
+                    titleOffsetX={250}
+                    titleOffsetY={18}
 					infoCardContent={<PocaFeInfo />}
 					infoTitleSide="right"
 				/>
@@ -317,11 +316,11 @@ export function CambioParadigmaHighlightStrips() {
 					title={'SIN FANATISMO,\nSON HACKERS'}
 					alignment="right"
 					backgroundColor="#fa6907"
-					barWidth={814}
-					barHeight={129}
-					titleWidth={502}
-					titleOffsetX={60}
-					titleOffsetY={18}
+                    barWidth={1000}
+                    barHeight={129}
+                    titleWidth={679}
+                    titleOffsetX={60}
+                    titleOffsetY={18}
 					infoCardContent={<SinFanatsismoInfo />}
 					infoTitleSide="left"
 				/>
@@ -333,11 +332,11 @@ export function CambioParadigmaHighlightStrips() {
 					title={'DESINTERÉS POR\nEL SISTEMA'}
 					alignment="left"
 					backgroundColor="#00b0f9"
-					barWidth={825}
-					barHeight={137}
-					titleWidth={679}
-					titleOffsetX={190}
-					titleOffsetY={22}
+                    barWidth={1000}
+                    barHeight={129}
+                    titleWidth={679}
+                    titleOffsetX={250}
+                    titleOffsetY={18}
 					infoCardContent={<DesinteresSistemaInfo />}
 					infoTitleSide="right"
 				/>
