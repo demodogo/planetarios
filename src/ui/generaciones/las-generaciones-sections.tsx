@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import { GenerationLaminaModal } from './generation-lamina-modal';
 import {
 	additionalDataIntro,
 	documentaryNote,
@@ -10,7 +11,6 @@ import {
 	sixGenerations,
 	sixGenerationsIntro,
 } from './las-generaciones-data';
-import { GenerationLaminaModal } from './generation-lamina-modal';
 
 function SectionTitle({
 	firstLine,
@@ -154,12 +154,17 @@ export function LasGeneracionesAdditionalSection() {
 				<div className="w-full bg-[#ffd3b6] lg:w-1/2">
 					<div className="mx-auto w-full max-w-[80rem] px-5 py-8 sm:px-8 sm:py-10 xl:px-[3.1875rem]">
 						<h3 className="font-heading text-[3.125rem] font-bold uppercase leading-none text-black sm:text-[3rem]">
-							DATOS ADICIONALES
+							FICHAS DOCUMENTALES
 						</h3>
 						<p className="font-body-prototype mt-3 max-w-[37.6875rem] text-[1.125rem] leading-[1.07] text-black/80 sm:text-[1.5625rem]">
 							{additionalDataIntro}
 						</p>
 					</div>
+				</div>
+				<div className="px-12">
+					Los datos reseñados en estas dos generaciones son puramente
+					documentales ya que el autor del estudio no tenía edad suficiente para
+					hacer el trabajo de campo
 				</div>
 				<div className="mx-auto w-full max-w-[80rem] px-5 pb-24 pt-14 sm:px-8 sm:pt-18 xl:px-[3.1875rem]">
 					<div className="grid gap-16 lg:grid-cols-2 lg:gap-10">

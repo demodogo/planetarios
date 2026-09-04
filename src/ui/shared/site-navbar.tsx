@@ -19,7 +19,7 @@ export function SiteNavbar() {
 						href="/generaciones-de-turno/contenido"
 						className="flex w-full items-center bg-[var(--brand-yellow)] px-6 py-2 rounded-full text-center max-w-fit"
 					>
-						GENERACIONES DE TURNO
+						EL ESTUDIO
 					</Link>
 					<Link href="/nosotros">NOSOTROS</Link>
 				</nav>

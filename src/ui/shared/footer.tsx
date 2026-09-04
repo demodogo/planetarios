@@ -13,7 +13,7 @@ export function HomeFooter() {
 					className="h-auto w-[9.5rem] xl:w-[12rem]"
 				/>
 				<div className="hidden xl:ml-[1.4375rem] xl:block xl:h-[3.09375rem] xl:w-px xl:bg-black/20" />
-				<div className="flex flex-col items-center gap-1 uppercase text-black/50 xl:ml-8 xl:flex-row xl:items-center xl:gap-0">
+				<div className="flex flex-col items-center gap-1 text-black/50 xl:ml-8 xl:flex-row xl:items-center xl:gap-0">
 					<div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 xl:flex-nowrap">
 						<p className="font-heading text-[0.76rem] leading-tight sm:text-[0.9375rem] xl:text-base">
 							rrios@planetarios.cl
