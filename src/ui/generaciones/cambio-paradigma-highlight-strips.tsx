@@ -22,7 +22,13 @@ type ValorItem = {
 	content: string;
 };
 
-function ValorInteractivo({ valor, isLeft }: { valor: ValorItem; isLeft?: boolean }) {
+function ValorInteractivo({
+	valor,
+	isLeft,
+}: {
+	valor: ValorItem;
+	isLeft?: boolean;
+}) {
 	const [isOpen, setIsOpen] = useState(false);
 	const containerRef = useRef<HTMLDivElement>(null);
 
@@ -394,19 +400,19 @@ export function CambioParadigmaHighlightStrips() {
 					MILLENNIALS
 				</h2>
 				<p className="font-body-prototype mx-auto mt-6 max-w-[37.4375rem] text-center text-[1.0625rem] leading-[1.07] text-black/80 xl:mt-8 xl:text-[1.5625rem]">
-					Los valores Millennials (cuadro 3) presentan un evidente contraste con
-					los valores de las generaciones anteriores al cambio de paradigma,
+					Los valores Millennials presentan un evidente contraste con los
+					valores de las generaciones anteriores al cambio de paradigma,
 					definitivamente la mentalidad cambió radicalmente.
 				</p>
 
 				{/* Entre el 2.000 y el 2.029 */}
 				<p className="font-body-prototype mt-8 text-center text-[1.0625rem] font-bold leading-[1.07] text-black xl:text-[1.5625rem]">
-					Entre el 2.000 y el 2.029
+					Entre el 2.000 y el 2029
 				</p>
 				<p className="font-body-prototype mx-auto mt-3 max-w-[37.4375rem] text-center text-[1.0625rem] leading-[1.07] text-black/80 xl:text-[1.5625rem]">
 					Revisemos en el siguiente cuadro los valores Millennials, que aún son
-					representativos de los años veinte, aunque a partir del 2025 empezarán
-					a ser más gravitantes los valores Centennials.
+					representativos de los años veinte, aunque a partir del 2025,
+					empezarán a ser más gravitantes los valores Centennials.
 				</p>
 
 				{/* Grilla de valores con figura central - Millennials */}

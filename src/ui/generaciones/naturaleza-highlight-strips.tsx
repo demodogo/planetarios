@@ -17,11 +17,11 @@ export function NaturalezaHighlightStrips() {
 					title={'ENTENDER MEJOR\nLA DEMANDA'}
 					alignment="left"
 					backgroundColor="#c1e61e"
-                    barWidth={1000}
-                    barHeight={129}
-                    titleWidth={679}
-                    titleOffsetX={250}
-                    titleOffsetY={18}
+					barWidth={1000}
+					barHeight={129}
+					titleWidth={679}
+					titleOffsetX={250}
+					titleOffsetY={18}
 					infoCardContent={<EntenderDemandaInfo />}
 					infoTitleSide="right"
 				/>
@@ -30,11 +30,11 @@ export function NaturalezaHighlightStrips() {
 					title={'IR AL RITMO DE\nLOS TIEMPOS'}
 					alignment="right"
 					backgroundColor="#fa6907"
-                    barWidth={1000}
-                    barHeight={129}
-                    titleWidth={679}
-                    titleOffsetX={60}
-                    titleOffsetY={18}
+					barWidth={1000}
+					barHeight={129}
+					titleWidth={679}
+					titleOffsetX={60}
+					titleOffsetY={18}
 					infoCardContent={<IrRitmoInfo />}
 					infoTitleSide="left"
 				/>
@@ -43,11 +43,11 @@ export function NaturalezaHighlightStrips() {
 					title={'ANTROPOLOGÍA DE\nLOS NEGOCIOS'}
 					alignment="left"
 					backgroundColor="#ffe940"
-                    barWidth={1000}
-                    barHeight={129}
-                    titleWidth={679}
-                    titleOffsetX={250}
-                    titleOffsetY={18}
+					barWidth={1000}
+					barHeight={129}
+					titleWidth={679}
+					titleOffsetX={250}
+					titleOffsetY={18}
 					infoCardContent={<AntropologiaInfo />}
 					infoTitleSide="right"
 				/>
@@ -56,11 +56,11 @@ export function NaturalezaHighlightStrips() {
 					title={'ENTENDER A\nLOS JÓVENES'}
 					alignment="right"
 					backgroundColor="#FFD3B6"
-                    barWidth={1000}
-                    barHeight={129}
-                    titleWidth={679}
-                    titleOffsetX={60}
-                    titleOffsetY={18}
+					barWidth={1000}
+					barHeight={129}
+					titleWidth={679}
+					titleOffsetX={60}
+					titleOffsetY={18}
 					infoCardContent={<EntenderJovenesInfo />}
 					infoTitleSide="left"
 				/>
@@ -73,11 +73,11 @@ export function NaturalezaHighlightStrips() {
 						ESTUDIO ETNOGRÁFICO
 					</h2>
 					<p className="font-body-prototype mx-auto mt-6 text-[1.0625rem] leading-[1.07] text-white/80 xl:mx-0 xl:mt-8 xl:max-w-[40rem] xl:text-[1.5625rem]">
-						Generaciones de Turno es una investigación de naturaleza antropológica
-						que busca documentar y explicar la realidad humana de cada época, y lo
-						hace por medio de la técnica de inmersión obteniendo como resultado
-						etnografías que describen las creencias y cultura de las sucesivas capas
-						generacionales.
+						Generaciones de Turno es una investigación de naturaleza
+						antropológica que busca documentar y explicar la realidad humana de
+						cada época, y lo hace por medio de la técnica de inmersión
+						obteniendo como resultado etnografías que describen las creencias y
+						cultura de las sucesivas capas generacionales.
 					</p>
 				</div>
 			</section>
@@ -92,9 +92,10 @@ export function NaturalezaHighlightStrips() {
 					TRADICIONALES
 				</h2>
 				<p className="font-body-prototype min-w-0 text-[1.0625rem] leading-[1.07] text-black/80 xl:ml-[2.5625rem] xl:mt-[1.1875rem] xl:text-[1.5625rem]">
-					Esta metodología es distinta de los estudios tradicionales que por métodos
-					de encuestas o focus group establecen parámetros socioeconómicos, hábitos y
-					preferencias; el resultado es una aproximación más cercana al &ldquo;deber ser&rdquo;.
+					Esta metodología es distinta de los estudios tradicionales que por
+					métodos de encuestas o focus group establecen parámetros
+					socioeconómicos, hábitos y preferencias cuyo resultado habitualmente
+					tiende a ser más cercano al &ldquo;deber ser&rdquo;.
 				</p>
 			</section>
 
@@ -104,11 +105,11 @@ export function NaturalezaHighlightStrips() {
 					title={'PUNTOS CIEGOS'}
 					alignment="left"
 					backgroundColor="#c1e61e"
-                    barWidth={1000}
-                    barHeight={129}
-                    titleWidth={679}
-                    titleOffsetX={250}
-                    titleOffsetY={45}
+					barWidth={1000}
+					barHeight={129}
+					titleWidth={679}
+					titleOffsetX={250}
+					titleOffsetY={45}
 					infoCardContent={<PuntosCiegosInfo />}
 					infoTitleSide="right"
 				/>
@@ -117,11 +118,11 @@ export function NaturalezaHighlightStrips() {
 					title={'INTUIR EL FUTURO'}
 					alignment="right"
 					backgroundColor="#fa6907"
-                    barWidth={1000}
-                    barHeight={129}
-                    titleWidth={679}
-                    titleOffsetX={60}
-                    titleOffsetY={45}
+					barWidth={1000}
+					barHeight={129}
+					titleWidth={679}
+					titleOffsetX={60}
+					titleOffsetY={45}
 					infoCardContent={<IntuirFuturoInfo />}
 					infoTitleSide="left"
 				/>
@@ -130,11 +131,11 @@ export function NaturalezaHighlightStrips() {
 					title={'MENSAJEROS\nDEL MAÑANA'}
 					alignment="left"
 					backgroundColor="#ffe940"
-                    barWidth={1000}
-                    barHeight={129}
-                    titleWidth={679}
-                    titleOffsetX={250}
-                    titleOffsetY={18}
+					barWidth={1000}
+					barHeight={129}
+					titleWidth={679}
+					titleOffsetX={250}
+					titleOffsetY={18}
 					infoCardContent={<MensajerosInfo />}
 					infoTitleSide="right"
 				/>
@@ -151,19 +152,21 @@ export function NaturalezaHighlightStrips() {
 				</h2>
 				<div className="font-body-prototype min-w-0 flex flex-col gap-4 text-[1.0625rem] leading-[1.07] text-black/80 xl:ml-[2.5625rem] xl:mt-[1.1875rem] xl:text-[1.5625rem]">
 					<p>
-						La información del estudio está pensada para el uso en empresas, para
-						facilitar el entendimiento de la cultura de cada época y así adaptar
-						mejor los modelos de negocio.
+						La información del estudio está pensada para el uso en empresas,
+						para facilitar el entendimiento de la cultura de cada época y así
+						adaptar mejor los modelos de negocio.
 					</p>
 					<p>
-						<span className="bg-[#ffe940] font-bold">Jóvenes, mensajeros del futuro</span>
+						<span className="bg-[#ffe940] font-bold">
+							Jóvenes, mensajeros del futuro
+						</span>
 					</p>
 					<p>
 						El estudio generaciones de turno ayuda a entender de un modo simple,
-						claro y entretenido el espíritu de cada tiempo; este entendimiento se
-						materializa a través de la observación de las capas juveniles
-						(veinteañeros) de cada década, quienes, como mensajeros del futuro, nos
-						insinúan cómo serán los años venideros.
+						claro y entretenido el espíritu de cada tiempo; este entendimiento
+						se materializa a través de la observación de las capas juveniles
+						(veinteañeros) de cada década, quienes, como mensajeros del futuro,
+						nos insinúan cómo serán los años venideros.
 					</p>
 				</div>
 			</section>
