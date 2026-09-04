@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { GenerationLaminaModal } from './generation-lamina-modal';
 import {
 	additionalDataIntro,
-	documentaryNote,
 	eightGenerationsCopy,
 	silentGenerations,
 	sixGenerations,
@@ -199,14 +198,6 @@ export function LasGeneracionesAdditionalSection() {
 								</div>
 							</article>
 						))}
-					</div>
-					<div className="mx-auto mt-18 max-w-[34.5625rem] text-center sm:mt-24">
-						<p className="font-body-prototype text-[1.125rem] font-bold leading-[1.07] text-black/80 sm:text-[1.5625rem]">
-							*Datos documentales
-						</p>
-						<p className="font-body-prototype mt-2 text-[1.125rem] leading-[1.07] text-black/80 sm:text-[1.5625rem]">
-							{documentaryNote}
-						</p>
 					</div>
 				</div>
 			</section>
